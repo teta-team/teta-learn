@@ -1,0 +1,44 @@
+/*
+|------------------------------------------------------|
+|=================|  FONTS & COLORS  |=================|
+|------------------------------------------------------|
+*/
+
+@font-face {
+  font-family: estedad;
+  src: url("../fonts/Estedad-FD-Regular.ttf");
+}
+
+@font-face {
+  font-family: vazir;
+  src: url("../fonts/Vazirmatn-Regular.woff2");
+}
+
+:root {
+  --font-header: estedad;
+  --font-default: vazir;
+}
+
+:root {
+  --color-accent: ;
+  --color-primary: ;
+  --color-secondary: ;
+}
+
+.loght-mode {
+  --color-heading: ;
+  --color-default: ;
+  --color-background: #f3f4f6;
+}
+
+.dark-mode {
+  --color-heading: ;
+  --color-default: ;
+  --color-background: ;
+}
+
+/*
+|------------------------------------------------------|
+|=====================|  GLOBAL  |=====================|
+|------------------------------------------------------|
+*/
