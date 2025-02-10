@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/App.css";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (
