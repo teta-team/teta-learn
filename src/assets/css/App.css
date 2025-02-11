@@ -437,6 +437,181 @@ body.dark-mode .category-box:hover {
 
 /*
 |------------------------------------------------------|
+|====================|  LESSONS  |=====================|
+|------------------------------------------------------|
+*/
+
+.lessons .title h2 {
+  margin: 10px 0;
+  padding-right: 5px;
+}
+
+.lessons .physics-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .chemistry-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .math-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .geometry-title .under-line {
+  margin: 10px 0;
+  width: 110px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .row {
+  margin: 20px 0;
+}
+
+.lessons a {
+  background-color: var(--color-background);
+  width: 20%;
+  margin: 4.2px;
+  padding: 25px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+body.light-mode .lessons a {
+  background-color: #ececec;
+  transition: all 0.2s ease;
+}
+
+body.light-mode .lessons a:hover {
+  background-color: #dedede;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+body.dark-mode .lessons a {
+  background-color: #262729;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .lessons a:hover {
+  background-color: #363636;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.lessons a img {
+  width: 60%;
+}
+
+.lessons a h3 {
+  font-size: 30px;
+}
+
+.lesson .project {
+  background-color: var(--color-background);
+  width: 20%;
+  margin: 14.2px;
+  padding: 15px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+body.light-mode .lesson .project {
+  background-color: #ececec;
+  transition: all 0.2s ease;
+}
+
+body.light-mode .lesson .project:hover {
+  background-color: #dedede;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+body.dark-mode .lesson .project {
+  background-color: #262729;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .lesson .project:hover {
+  background-color: #363636;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.lesson .project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.lesson .project h3 {
+  width: 100%;
+  margin: 10px 0;
+  padding-top: 5px;
+  border-top: 1px solid var(--color-accent);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson .project p {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson .project .tags {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.lesson .project .tags p {
+  width: fit-content;
+  padding: 3px 10px;
+  margin-left: 3px;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.lesson .project a {
+  border: 1px solid var(--color-accent);
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.lesson .project a:hover {
+  background-color: var(--color-primary);
+  transition: all 0.2s ease;
+}
+
+/*
+|------------------------------------------------------|
 |=====================|  FOOTER  |=====================|
 |------------------------------------------------------|
 */
