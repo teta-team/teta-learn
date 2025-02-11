@@ -5,10 +5,10 @@ import Category from "../components/Category";
 import Footer from "../components/Footer";
 
 function Home() {
-  const images = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRx5lxKmCM302TFRm9AlH5iOoCBIjD_RKwUP2M8KqK70aOF4EXeRRllpy7V2EIZTDhVmw&usqp=CAU",
-    "https://wallpapersok.com/images/high/4k-nature-waterfall-vca0x9gctkousu5t.jpg",
-  ];
+  // const images = [
+  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRx5lxKmCM302TFRm9AlH5iOoCBIjD_RKwUP2M8KqK70aOF4EXeRRllpy7V2EIZTDhVmw&usqp=CAU",
+  //   "https://wallpapersok.com/images/high/4k-nature-waterfall-vca0x9gctkousu5t.jpg",
+  // ];
   return (
     <>
       <header>
@@ -19,7 +19,7 @@ function Home() {
 
       <section>
         <div className="container">
-          <ImageSlider images={images} />
+          <ImageSlider />
         </div>
       </section>
 
@@ -28,7 +28,7 @@ function Home() {
           <h2>دسته بندی ها</h2>
           <div className="under-line"></div>
         </div>
-        <div className="categories d-flex row justify-content-between">
+        <div className="categories d-flex row f-wrap">
           <Category
             id="physics"
             name="فیزیک"
