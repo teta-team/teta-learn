@@ -1,22 +1,10 @@
 import React from "react";
-import Menu from "../components/Menu";
 import ImageSlider from "../components/ImageSlider";
 import Category from "../components/Category";
-import Footer from "../components/Footer";
 
 function Home() {
-  // const images = [
-  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRx5lxKmCM302TFRm9AlH5iOoCBIjD_RKwUP2M8KqK70aOF4EXeRRllpy7V2EIZTDhVmw&usqp=CAU",
-  //   "https://wallpapersok.com/images/high/4k-nature-waterfall-vca0x9gctkousu5t.jpg",
-  // ];
   return (
     <>
-      <header>
-        <div className="container">
-          <Menu />
-        </div>
-      </header>
-
       <section>
         <div className="container">
           <ImageSlider />
@@ -75,12 +63,6 @@ function Home() {
         </div>
         <div className="ranking"></div>
       </div>
-
-      <footer>
-        <div className="container">
-          <Footer />
-        </div>
-      </footer>
     </>
   );
 }

@@ -437,6 +437,93 @@ body.dark-mode .category-box:hover {
 
 /*
 |------------------------------------------------------|
+|====================|  LESSONS  |=====================|
+|------------------------------------------------------|
+*/
+
+.lessons .title h2 {
+  margin: 10px 0;
+  padding-right: 5px;
+}
+
+.lessons .physics-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .chemistry-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .math-title .under-line {
+  margin: 10px 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .geometry-title .under-line {
+  margin: 10px 0;
+  width: 110px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lessons .row {
+  margin: 20px 0;
+}
+
+.lessons a {
+  background-color: var(--color-background);
+  width: 20%;
+  margin: 4.2px;
+  padding: 25px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+body.light-mode .lessons a {
+  background-color: #ececec;
+  transition: all 0.2s ease;
+}
+
+body.light-mode .lessons a:hover {
+  background-color: #dedede;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+body.dark-mode .lessons a {
+  background-color: #262729;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .lessons a:hover {
+  background-color: #363636;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.lessons a img {
+  width: 60%;
+}
+
+.lessons a h3 {
+  font-size: 30px;
+}
+
+/*
+|------------------------------------------------------|
 |=====================|  FOOTER  |=====================|
 |------------------------------------------------------|
 */

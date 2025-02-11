@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import Menu from "../components/Menu";
+import Footer from "../components/Footer";
 
 function Layout() {
   function handleScroll() {
@@ -24,7 +26,19 @@ function Layout() {
       <div id="circle3"></div>
       <div id="circle4"></div>
 
+      <header>
+        <div className="container">
+          <Menu />
+        </div>
+      </header>
+
       <Outlet />
+
+      <footer>
+        <div className="container">
+          <Footer />
+        </div>
+      </footer>
       <button id="go-top" onClick={handleGoTop}>
         <i className="bi bi-arrow-up"></i>
       </button>
