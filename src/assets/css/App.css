@@ -88,6 +88,10 @@ h6 {
   align-items: center;
 }
 
+.f-wrap {
+  flex-wrap: wrap;
+}
+
 .gap-1 {
   gap: 0.375rem;
 }
@@ -311,6 +315,7 @@ header button i {
 
 .slider .slick-slider .slick-list img {
   height: 400px;
+  border-radius: 10px;
 }
 
 .slick-prev:before,
@@ -342,6 +347,7 @@ header button i {
 .category-box {
   background-color: var(--color-background);
   width: 20%;
+  margin: 4.2px;
   padding: 25px;
   border: 1px solid var(--color-primary);
   border-radius: 10px;
@@ -423,7 +429,7 @@ body.dark-mode .category-box:hover {
 }
 
 .ranking-title .under-line {
-  width: 200px;
+  width: 230px;
   height: 3px;
   background-color: var(--color-primary);
   border-radius: 25px;
