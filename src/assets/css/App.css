@@ -437,6 +437,72 @@ body.dark-mode .category-box:hover {
 
 /*
 |------------------------------------------------------|
+|=====================|  CONTACT  |====================|
+|------------------------------------------------------|
+*/
+
+.contact .container .board {
+  position: relative;
+  margin: 50px auto;
+  width: 1000px;
+  height: 550px;
+  border: 3px solid var(--color-accent);
+  border-radius: 46px 46px 50px 50px;
+  border-top: none;
+}
+
+.contact .container .board .title {
+  top: -3px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+}
+
+.contact .container .board .title .befor-text {
+  position: absolute;
+  right: -2.5px;
+  width: 7%;
+  height: 100%;
+  border-top: 3px solid var(--color-accent);
+  border-right: 3px solid var(--color-accent);
+  border-radius: 0 50px 0 0;
+}
+
+.contact .container .board .title .after-text {
+  position: absolute;
+  left: -2.5px;
+  width: 28%;
+  height: 100%;
+  border-top: 3px solid var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 50px 0 0 0;
+}
+
+.contact .container .board .title .text {
+  position: absolute;
+  top: -50px;
+  right: 8%;
+  width: 70%;
+  height: 20%;
+}
+
+.contact .container .board .screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact .container .board .screen .right {
+  
+}
+
+/*
+|------------------------------------------------------|
 |=====================|  FOOTER  |=====================|
 |------------------------------------------------------|
 */
