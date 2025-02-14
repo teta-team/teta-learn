@@ -1,8 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Project from "../../components/Project";
+import supabase from "../../supabase";
 import LessonBox from "../../components/LessonBox";
 
 function Physics() {
+  const [projects, setProjects] = useState([]);
+
+  async function loadProjects() {
+    let { data: projects, error } = await supabase.from("projects").select("*");
+    setProjects(projects);
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,14 +22,16 @@ function Physics() {
           <div className="under-line"></div>
         </div>
         <div className="d-flex row f-wrap">
-          <Project
-            id="ions"
-            lesson="chemistry"
-            image="https://irqplmkfkyawozeafpao.supabase.co/storage/v1/object/public/images//1736083361279-ions.png"
-            fname="یون نویسی"
-            text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، "
-            tags={["همه", "شیمی 1"]}
-          />
+          {projects.map((project, index) => {
+            <Project
+              id={project.id}
+              lesson={project.lesson}
+              image={project.image_url}
+              fname={project.name}
+              text={project.text}
+              tags={project.tags}
+            />;
+          })}
         </div>
         <div className="lesson-title">
           <h2>جوزه های فیزیک</h2>
