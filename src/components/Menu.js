@@ -40,7 +40,6 @@ function Menu() {
       <nav className="d-flex row">
         <Link to="/">خانه</Link>
         <Link to="/lessons">دروس</Link>
-        <Link to="/games">بازی ها</Link>
         <Link to="/contact">ارتباط با ما</Link>
         <div className="line"></div>
       </nav>
