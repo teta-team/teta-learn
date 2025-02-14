@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Contact from "./pages/Contact"
 import Lessons from "./pages/Lessons";
 import Physics from "./pages/lessons/Physics";
 import Chemistry from "./pages/lessons/Chemistry";
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/lessons/physics" element={<Physics />} />
           <Route path="/lessons/chemistry" element={<Chemistry />} />

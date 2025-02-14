@@ -377,6 +377,198 @@ body.dark-mode .category-box:hover {
 
 /*
 |------------------------------------------------------|
+|==================|  LAST LESSONS  |==================|
+|------------------------------------------------------|
+*/
+
+.last-lessons-title h2 {
+  margin: 5px;
+}
+
+.last-lessons-title .under-line {
+  width: 200px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+/*
+|------------------------------------------------------|
+|===================|  LAST GAMES  |===================|
+|------------------------------------------------------|
+*/
+
+.last-games-title h2 {
+  margin: 5px;
+}
+
+.last-games-title .under-line {
+  width: 200px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+/*
+|------------------------------------------------------|
+|=====================|  RANKS  |======================|
+|------------------------------------------------------|
+*/
+
+.ranking-title h2 {
+  margin: 5px;
+}
+
+.ranking-title .under-line {
+  width: 230px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+/*
+|------------------------------------------------------|
+|=====================|  CONTACT  |====================|
+|------------------------------------------------------|
+*/
+
+.contact .container .board {
+  position: relative;
+  margin: 50px auto;
+  width: 1000px;
+  height: 460px;
+  border: 3px solid var(--color-accent);
+  border-radius: 46px 46px 50px 50px;
+  border-top: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .container .board .title {
+  top: -3px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+}
+
+.contact .container .board .title .befor-text {
+  position: absolute;
+  right: -2.5px;
+  width: 7%;
+  height: 100%;
+  border-top: 3px solid var(--color-accent);
+  border-right: 3px solid var(--color-accent);
+  border-radius: 0 50px 0 0;
+}
+
+.contact .container .board .title .after-text {
+  position: absolute;
+  left: -2.5px;
+  width: 36%;
+  height: 100%;
+  border-top: 3px solid var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 50px 0 0 0;
+}
+
+.contact .container .board .title .text {
+  position: absolute;
+  top: -50px;
+  right: 8%;
+  width: 70%;
+  height: 5%;
+  font-size: 14px;
+}
+
+.contact .container .board .screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact .container .board .screen .right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: 50px 20px;
+}
+
+.contact .container .board .screen .right .inputs {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+.contact .container .board .screen .right .inputs input {
+  width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact .container .board .screen .right select {
+  width: 45%;
+  padding: 5px;
+  height: 60px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.contact .container .board .screen .right textarea {
+  max-width: 70%;
+  min-width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 5px;
+  max-height: 20%;
+  min-height: 20%;
+  font-size: 16px;
+}
+
+.contact .container .board .screen .right button {
+  width: 40%;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 30px;
+  font-size: 16px;
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact .container .board .screen .right button:hover {
+  background-color: var(--color-primary);
+}
+
+.contact .container .board .screen .right button:active {
+  background-color: var(--color-secondary);
+}
+
+.contact .container .board .screen .left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+/*
+|------------------------------------------------------|
 |====================|  LESSONS  |=====================|
 |------------------------------------------------------|
 */
