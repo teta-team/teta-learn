@@ -1,7 +1,7 @@
 import React from "react";
 import ImageSlider from "../components/ImageSlider";
 import Category from "../components/Category";
-
+import supabase from "../supabase";
 function Home() {
   return (
     <>
