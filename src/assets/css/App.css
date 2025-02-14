@@ -265,18 +265,9 @@ nav a:nth-child(2):hover ~ .line {
 }
 
 nav a:nth-child(3):hover ~ .line {
-  width: 65px;
-  -webkit-transform: translateX(-107px);
-  transform: translateX(-107px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-nav a:nth-child(4):hover ~ .line {
   width: 85px;
-  -webkit-transform: translateX(-173px);
-  transform: translateX(-173px);
+  -webkit-transform: translateX(-108px);
+  transform: translateX(-108px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -382,57 +373,6 @@ body.dark-mode .category-box:hover {
 
 .category-box h2 {
   font-size: 30px;
-}
-
-/*
-|------------------------------------------------------|
-|==================|  LAST LESSONS  |==================|
-|------------------------------------------------------|
-*/
-
-.last-lessons-title h2 {
-  margin: 5px;
-}
-
-.last-lessons-title .under-line {
-  width: 200px;
-  height: 3px;
-  background-color: var(--color-primary);
-  border-radius: 25px;
-}
-
-/*
-|------------------------------------------------------|
-|===================|  LAST GAMES  |===================|
-|------------------------------------------------------|
-*/
-
-.last-games-title h2 {
-  margin: 5px;
-}
-
-.last-games-title .under-line {
-  width: 200px;
-  height: 3px;
-  background-color: var(--color-primary);
-  border-radius: 25px;
-}
-
-/*
-|------------------------------------------------------|
-|=====================|  RANKS  |======================|
-|------------------------------------------------------|
-*/
-
-.ranking-title h2 {
-  margin: 5px;
-}
-
-.ranking-title .under-line {
-  width: 230px;
-  height: 3px;
-  background-color: var(--color-primary);
-  border-radius: 25px;
 }
 
 /*
@@ -608,6 +548,30 @@ body.dark-mode .lesson .project:hover {
 .lesson .project a:hover {
   background-color: var(--color-primary);
   transition: all 0.2s ease;
+}
+
+.lesson .apps-title h2 {
+  margin: 5px 0;
+}
+
+.lesson .apps-title .under-line {
+  margin: 10px 0;
+  width: 230px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
+}
+
+.lesson .lesson-title h2 {
+  margin: 5px 0;
+}
+
+.lesson .lesson-title .under-line {
+  margin: 10px 0;
+  width: 200px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 25px;
 }
 
 /*

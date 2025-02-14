@@ -39,30 +39,6 @@ function Home() {
           />
         </div>
       </div>
-
-      <div className="container">
-        <div className="last-lessons-title">
-          <h2>آخرین دروس</h2>
-          <div className="under-line"></div>
-        </div>
-        <div className="last-lessons"></div>
-      </div>
-
-      <div className="container">
-        <div className="last-games-title">
-          <h2>آخرین بازی ها</h2>
-          <div className="under-line"></div>
-        </div>
-        <div className="last-games"></div>
-      </div>
-
-      <div className="container">
-        <div className="ranking-title">
-          <h2>دانش آموزان برتر</h2>
-          <div className="under-line"></div>
-        </div>
-        <div className="ranking"></div>
-      </div>
     </>
   );
 }

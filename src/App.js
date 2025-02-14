@@ -9,7 +9,6 @@ import Physics from "./pages/lessons/Physics";
 import Chemistry from "./pages/lessons/Chemistry";
 import Geometry from "./pages/lessons/Geometry";
 import Math from "./pages/lessons/Math";
-import Games from "./pages/Games"
 import NotFound from "./pages/404";
 
 function App() {
@@ -23,10 +22,8 @@ function App() {
           <Route path="/lessons/chemistry" element={<Chemistry />} />
           <Route path="/lessons/math" element={<Math />} />
           <Route path="/lessons/geometry" element={<Geometry />} />
-          <Route path="/games" element={<Games />} />
+          <Route path="/*" element={<NotFound />} />
         </Route>
-
-        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
