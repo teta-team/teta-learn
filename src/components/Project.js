@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Project({ id, lesson, image, fname, text, tags = [], grid }) {
+function Project({ id, lesson, image, fname, text, tags = [] }) {
   return (
     <div className="project d-flex column align-items-center">
       <img src={image} alt={fname} />
