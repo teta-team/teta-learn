@@ -4,7 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contact from "./pages/Con
+import Contact from "./pages/Contact"
 import Lessons from "./pages/Lessons";
 import Physics from "./pages/lessons/Physics";
 import Chemistry from "./pages/lessons/Chemistry";
