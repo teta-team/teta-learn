@@ -11,7 +11,7 @@ function Project({ id, lesson, image, fname, text, tags = [] }) {
             <p key={index}>{tag}</p>
           ))}
       </div>
-      <Link to={`/lessons/${lesson}/${id}`}>امتحان کن</Link>
+      <Link to={`/lessons/${lesson}/project?id=${id}`}>امتحان کن</Link>
     </div>
   );
 }
