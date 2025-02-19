@@ -1,23 +1,52 @@
 import { useEffect, useState } from "react";
 import Project from "../../components/Project";
 import supabase from "../../supabase";
-import LessonBox from "../../components/LessonBox";
 
 function Physics() {
   const [projects, setProjects] = useState([]);
 
-  async function loadProjects() {
-    let { data: projects } = await supabase
-      .from("projects")
-      .select("*")
-      .eq("lesson", "chemistry");
-    setProjects(projects);
+  async function loadProjects(physicsLevel) {
+    try {
+      let query = supabase
+        .from("projects")
+        .select("*")
+        .eq("lesson", "geometry");
+
+      if (physicsLevel) {
+        query = query.contains("tags", [`فیزیک ${physicsLevel}`]);
+      } else {
+        query = query.contains("tags", ["فیزیک"]);
+      }
+
+      const { data, error } = await query;
+      if (error) {
+        console.error("Error loading projects:", error);
+      } else {
+        setProjects(data);
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred:", error);
+    }
   }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    loadProjects();
+    const urlParams = new URLSearchParams(window.location.search);
+    let physicsLevel = urlParams.get("id");
+
+    if (physicsLevel === "10") {
+      physicsLevel = "1";
+    } else if (physicsLevel === "11") {
+      physicsLevel = "2";
+    } else if (physicsLevel === "12") {
+      physicsLevel = "3";
+    } else if (!physicsLevel) {
+      physicsLevel = null;
+    }
+
+    loadProjects(physicsLevel);
   }, []);
+
   return (
     <div className="lesson">
       <div className="container">
@@ -35,15 +64,9 @@ function Physics() {
               fname={project.name}
               text={project.text}
               tags={project.tags}
+              link={project.link}
             />
           ))}
-        </div>
-        <div className="lesson-title">
-          <h2>جوزه های فیزیک</h2>
-          <div className="under-line"></div>
-        </div>
-        <div className="d-flex row f-wrap">
-          <LessonBox />
         </div>
       </div>
     </div>

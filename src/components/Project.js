@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Project({ id, lesson, image, fname, text, tags = [] }) {
+function Project({ id, image, fname, text, tags = [], link }) {
   return (
     <div className="project d-flex column align-items-center">
       <img src={image} alt={fname} />
@@ -11,7 +11,7 @@ function Project({ id, lesson, image, fname, text, tags = [] }) {
             <p key={index}>{tag}</p>
           ))}
       </div>
-      <Link to={`/lessons/${lesson}/project?id=${id}`}>امتحان کن</Link>
+      <Link to={link} target="_blank">امتحان کن</Link>
     </div>
   );
 }
