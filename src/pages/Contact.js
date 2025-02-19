@@ -18,10 +18,10 @@ function Contact() {
                   <input type="text" placeholder="نام و نام خانوادگی"></input>
                 </label>
                 <label>
-                  <input type="email" placeholder="ایمیل"></input>
+                  <input type="tel" placeholder="شماره تلفن"></input>
                 </label>
                 <label>
-                  <input type="tel" placeholder="شماره تلفن"></input>
+                  <input type="email" placeholder="ایمیل"></input>
                 </label>
                 <select>
                   <option>ریاضی</option>
@@ -34,7 +34,9 @@ function Contact() {
               <textarea placeholder="توضیحات را بنویسید"></textarea>
               <button type="submit">ارسال</button>
             </div>
-            <div className="left"></div>
+            <div className="left">
+              <img src="./assets/images/Sent Message-cuate.svg"></img>
+            </div>
           </div>
         </div>
       </div>

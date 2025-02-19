@@ -10,7 +10,7 @@ function Physics() {
     let { data: projects } = await supabase
       .from("projects")
       .select("*")
-      .eq("lesson", "chemistry");
+      .eq("lesson", "physics");
     setProjects(projects);
   }
 
