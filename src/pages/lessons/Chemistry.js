@@ -51,17 +51,17 @@ function Chemistry() {
 
   if(loading) {
     return (
-      <>
-        <h1>LOading</h1>
-      </>
-    )
+      <div id="loader-box">
+        <div class="loader"></div>
+      </div>
+    );
   }
 
   return (
     <div className="lesson">
       <div className="container">
-        <div className="apps-title">
-          <h2>برنامه های کاربردی</h2>
+        <div className="lab-title">
+          <h2>آزمایشات درسی</h2>
           <div className="under-line"></div>
         </div>
         <div className="d-flex row f-wrap">

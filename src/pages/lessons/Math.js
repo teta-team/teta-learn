@@ -10,7 +10,7 @@ function MathPage() {
       let query = supabase
         .from("projects")
         .select("*")
-        .eq("lesson", "geometry");
+        .eq("lesson", "math");
 
       if (mathLevel) {
         query = query.contains("tags", [`ریاضی ${mathLevel}`]);

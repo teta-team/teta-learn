@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import IonsApp from "./apps/ions/Ions";
+import JermMoli from "./apps/tabdilat/ch-jerm/Jerm";
 
 function ProjectsPage() {
   const [id, setId] = useState(null);
@@ -9,9 +10,9 @@ function ProjectsPage() {
     if (newId !== id) {
       setId(newId);
     }
-  }, [])
+  }, []);
 
-  return <>{id === "1" ? <IonsApp /> : null}</>;
+  return <>{id === "1" ? <IonsApp /> : id === "2" ? <JermMoli /> : ""}</>;
 }
 
 export default ProjectsPage;

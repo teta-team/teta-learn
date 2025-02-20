@@ -1,9 +1,9 @@
 function NotFound() {
   return (
     <>
-      <img src="./assets/images/questions-animate.svg" />
+      <img src="/assets/images/questions-animate.svg" />
     </>
   );
 }
 
-export default NotFound
+export default NotFound;
