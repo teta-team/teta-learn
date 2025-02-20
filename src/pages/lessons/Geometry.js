@@ -50,7 +50,7 @@ function Geometry() {
   return (
     <div className="lesson">
       <div className="container">
-        <div className="apps-title">
+        <div className="lab-title">
           <h2>برنامه های کاربردی</h2>
           <div className="under-line"></div>
         </div>

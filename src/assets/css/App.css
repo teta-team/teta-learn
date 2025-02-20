@@ -1,8 +1,26 @@
 /*
 |------------------------------------------------------|
-|=================|  FONTS & COLORS  |=================|
+|===========|  FONTS & COLORS & SCROLL BAR  |==========|
 |------------------------------------------------------|
 */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
 
 @font-face {
   font-family: estedad;
@@ -35,6 +53,65 @@
   --color-heading: #f3f4f6;
   --color-default: #d1dae7;
   --color-background: #212324;
+}
+
+/*
+|------------------------------------------------------|
+|===================|  LOAD SCREEN  |==================|
+|------------------------------------------------------|
+*/
+
+#loader-box {
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 4px;
+  color: var(--color-accent);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px, 19px 0 0 5px,
+    38px 0 0 5px, 57px 0 0 5px, 19px 19px 0 0px, 38px 19px 0 0px,
+    57px 19px 0 0px;
+  transform: translateX(-38px);
+  animation: l26 2s infinite linear;
+}
+@keyframes l26 {
+  12.5% {
+    box-shadow: 19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0 0 5px, 38px 0 0 0px, 57px 0 0 5px, 19px 19px 0 0px, 38px 19px 0 0px,
+      57px 19px 0 0px;
+  }
+  25% {
+    box-shadow: 19px -19px 0 5px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 0px, 19px 19px 0 0px, 38px 19px 0 5px,
+      57px 19px 0 0px;
+  }
+  50% {
+    box-shadow: 19px -19px 0 5px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 0px, 19px 19px 0 0px, 38px 19px 0 0px,
+      57px 19px 0 5px;
+  }
+  62.5% {
+    box-shadow: 19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
+      19px 0 0 5px, 38px 0 0 0px, 57px 0 0 0px, 19px 19px 0 0px, 38px 19px 0 5px,
+      57px 19px 0 5px;
+  }
+  75% {
+    box-shadow: 19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 5px, 19px 19px 0 0px, 38px 19px 0 0px,
+      57px 19px 0 5px;
+  }
+  87.5% {
+    box-shadow: 19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 5px, 57px 0 0 0px, 19px 19px 0 5px, 38px 19px 0 0px,
+      57px 19px 0 0px;
+  }
 }
 
 /*
@@ -556,13 +633,13 @@ body.dark-mode .lesson .project:hover {
   transition: all 0.2s ease;
 }
 
-.lesson .apps-title h2 {
+.lesson .lab-title h2 {
   margin: 5px 0;
 }
 
-.lesson .apps-title .under-line {
+.lesson .lab-title .under-line {
   margin: 10px 0;
-  width: 230px;
+  width: 200px;
   height: 3px;
   background-color: var(--color-primary);
   border-radius: 25px;
@@ -1190,6 +1267,59 @@ footer p strong {
   height: 10px;
   background-color: var(--color-default);
   border-radius: 50%;
+}
+
+/*
+|------------------------------------------------------|
+|===================|  JERM MOLI  |====================|
+|------------------------------------------------------|
+*/
+
+.JermMoli {
+  direction: ltr;
+  height: 77vh;
+}
+
+.JermMoli .mode {
+  margin-bottom: 40px;
+}
+
+.JermMoli .body {
+  width: 100%;
+}
+
+.JermMoli .body form {
+  width: 100%;
+}
+
+.JermMoli input {
+  width: 80px;
+  font-family: vazir;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.JermMoli select {
+  background-color: var(--color-background);
+  color: var(--color-default);
+  font-family: vazir;
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.JermMoli span {
+  font-size: 38px;
+  margin: 0 5px;
+}
+
+.JermMoli p {
+  font-size: 24px;
+  margin: 0;
 }
 
 /*
