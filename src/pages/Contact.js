@@ -35,7 +35,10 @@ function Contact() {
               <button type="submit">ارسال</button>
             </div>
             <div className="left">
-              <img src="./assets/images/Sent Message-cuate.svg"></img>
+              <img
+                src="./assets/images/Sent Message-cuate.svg"
+                alt="ارتباط با ما"
+              ></img>
             </div>
           </div>
         </div>

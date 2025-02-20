@@ -20,22 +20,18 @@ function Home() {
           <Category
             id="physics"
             name="فیزیک"
-            image="https://cdn-icons-png.flaticon.com/512/306/306335.png"
+            image="./assets/images/physics.png"
           />
           <Category
             id="chemistry"
             name="شیمی"
-            image="https://cdn-icons-png.freepik.com/256/2387/2387545.png?semt=ais_hybrid"
+            image="./assets/images/chemistry.png"
           />
-          <Category
-            id="math"
-            name="ریاضی"
-            image="https://cdn-icons-png.flaticon.com/512/746/746960.png"
-          />
+          <Category id="math" name="ریاضی" image="./assets/images/math.png" />
           <Category
             id="geometry"
             name="هندسه"
-            image="https://cdn-icons-png.flaticon.com/512/3941/3941113.png"
+            image="./assets/images/geometry.png"
           />
         </div>
       </div>

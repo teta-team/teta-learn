@@ -10,7 +10,7 @@ function Physics() {
       let query = supabase
         .from("projects")
         .select("*")
-        .eq("lesson", "geometry");
+        .eq("lesson", "physics");
 
       if (physicsLevel) {
         query = query.contains("tags", [`فیزیک ${physicsLevel}`]);

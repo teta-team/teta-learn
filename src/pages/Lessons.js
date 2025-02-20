@@ -13,19 +13,19 @@ function Lessons() {
             id="10"
             name="فیزیک 1"
             lesson="physics"
-            image="https://icons.veryicon.com/png/o/miscellaneous/stationery-icons/physics-9.png"
+            image="/assets/images/physics2.png"
           />
           <Lesson
             id="11"
             name="فیزیک 2"
             lesson="physics"
-            image="https://cdn-icons-png.flaticon.com/512/306/306335.png"
+            image="/assets/images/physics.png"
           />
           <Lesson
             id="12"
             name="فیزیک 3"
             lesson="physics"
-            image="https://cdn-icons-png.freepik.com/512/5190/5190400.png"
+            image="/assets/images/physics1.png"
           />
         </div>
 
@@ -38,19 +38,19 @@ function Lessons() {
             id="10"
             name="شیمی 1"
             lesson="chemistry"
-            image="https://cdn-icons-png.flaticon.com/512/7812/7812701.png"
+            image="/assets/images/chemistry1.png"
           />
           <Lesson
             id="11"
             name="شیمی 2"
             lesson="chemistry"
-            image="https://cdn-icons-png.flaticon.com/512/8540/8540907.png"
+            image="/assets/images/chemistry2.png"
           />
           <Lesson
             id="12"
             name="شیمی 3"
             lesson="chemistry"
-            image="https://cdn-icons-png.freepik.com/256/2387/2387545.png?semt=ais_hybrid"
+            image="/assets/images/chemistry.png"
           />
         </div>
 
@@ -63,19 +63,19 @@ function Lessons() {
             id="10"
             name="ریاضی 1"
             lesson="math"
-            image="https://cdn-icons-png.freepik.com/256/1739/1739515.png?semt=ais_hybrid"
+            image="/assets/images/math2.png"
           />
           <Lesson
             id="11"
             name="ریاضی 2"
             lesson="math"
-            image="https://cdn-icons-png.flaticon.com/512/746/746960.png"
+            image="/assets/images/math.png"
           />
           <Lesson
             id="12"
             name="ریاضی 3"
             lesson="math"
-            image="https://cdn-icons-png.freepik.com/256/3655/3655612.png?semt=ais_hybrid"
+            image="/assets/images/math1.png"
           />
         </div>
 
@@ -88,19 +88,19 @@ function Lessons() {
             id="10"
             name="هندسه 1"
             lesson="geometry"
-            image="https://cdn-icons-png.freepik.com/512/4408/4408120.png"
+            image="/assets/images/geometry2.png"
           />
           <Lesson
             id="11"
             name="هندسه 2"
             lesson="geometry"
-            image="https://cdn-icons-png.flaticon.com/512/3941/3941113.png"
+            image="/assets/images/geometry.png"
           />
           <Lesson
             id="12"
             name="هندسه 3"
             lesson="geometry"
-            image="https://cdn-icons-png.flaticon.com/512/2322/2322659.png"
+            image="/assets/images/geometry1.png"
           />
         </div>
       </div>
