@@ -4,6 +4,7 @@ import supabase from "../../supabase";
 
 function Chemistry() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   async function loadProjects(chemistryLevel) {
     try {
@@ -23,6 +24,7 @@ function Chemistry() {
         console.error("Error loading projects:", error);
       } else {
         setProjects(data);
+        setLoading(false)
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);
@@ -46,6 +48,14 @@ function Chemistry() {
 
     loadProjects(chemistryLevel);
   }, []);
+
+  if(loading) {
+    return (
+      <>
+        <h1>LOading</h1>
+      </>
+    )
+  }
 
   return (
     <div className="lesson">
