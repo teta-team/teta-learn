@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import data from "./data.json";
 
 function IonDetails() {
@@ -8,6 +8,7 @@ function IonDetails() {
   }
 
   const atomicNum = getQueryParam("atomicNum");
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     const atom = data.atoms.find((a) => a.atomicNum == atomicNum);
@@ -154,11 +155,13 @@ function IonDetails() {
           <div class="layers">
             <h1>زیر لایه های اتم ${atom.name}:</h1>
             <p>${configuration ? configuration : "error"}</p>
-      <h1>دسته: ${atom.group}</h1>
+            <h2>دسته: ${atom.group}</h2>
           </div>
           <div class="teif">
             <h1>طیف نشری اتم ${atom.name}: </h1>
-            <img src="${atom.spectrum}" width="40%" />
+            <img id="spectrum-image" src="${
+              atom.spectrum
+            }" onload="showDetails()" />
           </div>
           <div class="lweis">
             <h1>ساختار الکترون نقطه ای اتم ${atom.name}: </h1>
@@ -167,17 +170,31 @@ function IonDetails() {
               ${circles}
             </div>
           </div>
-          
         </div>
       `;
-      document.getElementById("details").innerHTML = "";
-      document.getElementById("details").innerHTML += details;
+
+      document.getElementById("details").innerHTML = details;
+      window.showDetails = () => {
+        document.getElementById("details").style.display = "block";
+        setLoader(false);
+      };
     } else {
       console.error("Atom not found");
     }
   }, []);
 
-  return <div id="details"></div>;
+  return (
+    <>
+      {loader ? (
+        <div id="loader-box">
+          <div class="loader"></div>
+        </div>
+      ) : (
+        ""
+      )}
+      <div id="details" style={{ display: "none" }}></div>
+    </>
+  );
 }
 
 export default IonDetails;

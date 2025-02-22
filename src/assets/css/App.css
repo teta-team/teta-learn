@@ -1106,11 +1106,14 @@ footer p strong {
 #details {
   width: 1200px;
   margin: 0 auto;
-  height: 77vh;
+}
+
+#details .details {
+  width: 100%;
+  position: relative;
 }
 
 #details .box {
-  margin: 40px 30px;
   padding: 20px;
   background-image: linear-gradient(45deg, #649bff, #82db79);
   display: flex;
@@ -1122,6 +1125,7 @@ footer p strong {
   border-radius: 15px;
   box-shadow: 0 0 10px #64e0ff;
   position: absolute;
+  top: 5%;
   right: 80%;
 }
 
@@ -1148,10 +1152,9 @@ footer p strong {
   color: #000;
 }
 
-#details .name {
-  position: absolute;
-  top: 40px;
-  font-size: 50px;
+#details .name h1 {
+  margin: 0;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -1159,43 +1162,57 @@ footer p strong {
   color: var(--color-heading);
 }
 
-#details .layers {
-  position: absolute;
-  top: 130px;
+#details .layers h1 {
+  margin: 10px 0;
   font-size: 30px;
 }
 
-#details .layers h1:nth-child(2) {
-  margin-top: 30px;
+#details .layers p{
+  width: 80%;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px auto;
+}
+
+#details .layers h2 {
+  margin: 0;
+  font-size: 30px;
 }
 
 #details .teif {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
-  top: 250px;
+  margin: 20px 0;
 }
 
 #details .teif h1 {
   font-size: 30px;
+  margin: 0;
   margin-left: 20px;
+}
+
+#details .teif img {
+  width: 45%;
+  border-radius: 10px;
+  outline: 1px solid var(--color-accent);
+  outline-offset: 5px;
 }
 
 #details .lweis {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
-  top: 430px;
+  margin: 40px 0;
 }
 
 #details .lweis h1 {
+  margin: 0;
   font-size: 30px;
 }
 
 #details .lweis .shape {
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 #details h2 {
@@ -1329,152 +1346,9 @@ footer p strong {
 */
 
 @media only screen and (max-width: 480px) {
-  #invoke {
-    width: 350px;
-    margin-bottom: 100px;
-  }
+  
+}
 
-  #invoke button {
-    padding: 5px 25px;
-  }
-
-  #table {
-    grid-template-columns: 45px 45px 45px 45px 45px 45px 45px;
-  }
-
-  .box {
-    height: 45px;
-    width: 45px;
-  }
-
-  .box:nth-child(2) {
-    grid-column: 8;
-  }
-
-  .box:nth-child(5) {
-    grid-column: 3;
-  }
-
-  .box:nth-child(13) {
-    grid-column: 3;
-  }
-
-  .box:nth-child(21) {
-    grid-column: 3;
-  }
-
-  .box:nth-child(29) {
-    grid-column: 3;
-  }
-
-  .box span {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .box span h2 {
-    font-size: 13px;
-    font-weight: bold;
-  }
-
-  .box span sub {
-    align-self: flex-end;
-    margin-right: 3px;
-    font-size: 10px;
-  }
-
-  .box span sup {
-    align-self: flex-start;
-    margin-left: 3px;
-    font-size: 10px;
-  }
-
-  .box p {
-    font-size: 10px;
-  }
-
-  #details .box {
-    width: 100px;
-    height: 100px;
-    right: 65%;
-  }
-
-  #details .box h2 {
-    font-size: 45px;
-  }
-
-  #details .box sup {
-    font-size: 20px;
-  }
-
-  #details .box sub {
-    font-size: 20px;
-  }
-
-  #details .name {
-    right: 40px;
-  }
-
-  #details h1 {
-    font-size: 35px;
-  }
-
-  #details .layers {
-    top: 130px;
-    right: 40px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #details .layers h1 {
-    font-size: 20px;
-    margin: 0;
-    margin-bottom: 15px;
-  }
-
-  #details .layers p {
-    font-size: 15px;
-  }
-
-  #details .layers h1:last-child {
-    margin: 10px 0;
-  }
-
-  #details .teif {
-    top: 250px;
-    right: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #details .teif h1 {
-    font-size: 20px;
-  }
-
-  #details .teif img {
-    width: 80%;
-    margin-top: 30px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  #details .lweis {
-    width: 90%;
-    top: 480px;
-    right: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #details .lweis h1 {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  #details .lweis .shape {
-    margin: 0 auto;
-  }
+@media only screen and (max-width: 768) {
+  
 }

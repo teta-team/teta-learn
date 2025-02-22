@@ -4,6 +4,7 @@ import supabase from "../../supabase";
 
 function Geometry() {
   const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
 
   async function loadProjects(geometryLevel) {
     try {
@@ -23,6 +24,7 @@ function Geometry() {
         console.error("Error loading projects:", error);
       } else {
         setProjects(data);
+        setLoading(false);
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);
@@ -47,11 +49,19 @@ function Geometry() {
     loadProjects(geometryLevel);
   }, []);
 
+  if (loading) {
+    return (
+      <div id="loader-box">
+        <div class="loader"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="lesson">
       <div className="container">
-        <div className="lab-title">
-          <h2>برنامه های کاربردی</h2>
+        <div className="lab-title ge">
+          <h2>آزمایشات درسی</h2>
           <div className="under-line"></div>
         </div>
         <div className="d-flex row f-wrap">

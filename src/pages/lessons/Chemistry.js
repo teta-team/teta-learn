@@ -60,7 +60,7 @@ function Chemistry() {
   return (
     <div className="lesson">
       <div className="container">
-        <div className="lab-title">
+        <div className="lab-title ch">
           <h2>آزمایشات درسی</h2>
           <div className="under-line"></div>
         </div>
