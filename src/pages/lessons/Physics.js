@@ -4,13 +4,11 @@ import supabase from "../../supabase";
 
 function Physics() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   async function loadProjects(physicsLevel) {
     try {
-      let query = supabase
-        .from("projects")
-        .select("*")
-        .eq("lesson", "physics");
+      let query = supabase.from("projects").select("*").eq("lesson", "physics");
 
       if (physicsLevel) {
         query = query.contains("tags", [`فیزیک ${physicsLevel}`]);
@@ -23,6 +21,7 @@ function Physics() {
         console.error("Error loading projects:", error);
       } else {
         setProjects(data);
+        setLoading(false);
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);
@@ -47,11 +46,19 @@ function Physics() {
     loadProjects(physicsLevel);
   }, []);
 
+  if (loading) {
+    return (
+      <div id="loader-box">
+        <div class="loader"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="lesson">
       <div className="container">
-        <div className="apps-title">
-          <h2>برنامه های کاربردی</h2>
+        <div className="lab-title ph">
+          <h2>آزمایشات درسی</h2>
           <div className="under-line"></div>
         </div>
         <div className="d-flex row f-wrap">
