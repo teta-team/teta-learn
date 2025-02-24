@@ -52,7 +52,7 @@ function MathPage() {
   if (loading) {
     return (
       <div id="loader-box">
-        <div class="loader"></div>
+        <div className="loader"></div>
       </div>
     );
   }
