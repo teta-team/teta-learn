@@ -8,10 +8,10 @@ function IonsApp() {
     table.innerHTML = "";
     atoms.map((atom) => {
       const box = `
-                    <button class="box ${atom.group} ${
+                    <button className="box ${atom.group} ${
         atom.status == 0 ? "disallow" : ""
       }" id="${atom.atomicNum}">
-                        <p class="group">${atom.tableGroup}</p>
+                        <p className="group">${atom.tableGroup}</p>
                         <span>
                             <sub>${atom.atomicNum}</sub>
                             <h2>${atom.symbol}</h2>

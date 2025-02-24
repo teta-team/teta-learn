@@ -7,17 +7,18 @@ function Contact() {
   const emailRef = useRef(null);
   const lessonRef = useRef(null);
   const textRef = useRef(null);
-  const userName = nameRef.current.value;
-  const userPhone = phoneRef.current.value;
-  const userEmail = emailRef.current.value;
-  const userLesson = lessonRef.current.value;
-  const userText = textRef.current.value;
 
   async function handleClick() {
+    const userName = nameRef.current.value;
+    const userPhone = phoneRef.current.value;
+    const userEmail = emailRef.current.value;
+    const userLesson = lessonRef.current.value;
+    const userText = textRef.current.value;
+
     if (
-      userName === "" &&
-      userPhone === "" &&
-      userEmail === "" &&
+      userName === "" ||
+      userPhone === "" ||
+      userEmail === "" ||
       userText === ""
     ) {
       alert("لطفا مقادیر لازم را پر کنید!");

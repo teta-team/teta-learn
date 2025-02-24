@@ -26,7 +26,7 @@ const ImageSlider = () => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              style={{ width: "100%", height: "400px" }}
+              style={{ width: "100%"}}
             />
           </div>
         ))}

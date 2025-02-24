@@ -212,6 +212,10 @@ li {
   list-style: none;
 }
 
+button {
+  font-family: vazir;
+}
+
 #go-top {
   position: fixed;
   bottom: 30px;
@@ -682,7 +686,7 @@ body.dark-mode .lesson .project:hover {
   }
 
   50% {
-    border-color: #fff;
+    border-color: var(--color-heading);
   }
 
   100% {
@@ -728,7 +732,7 @@ body.dark-mode .lesson .project:hover {
   }
 
   50% {
-    border-color: #fff;
+    border-color: var(--color-heading);
   }
 
   100% {
@@ -751,7 +755,7 @@ body.dark-mode .lesson .project:hover {
 
 @keyframes text-dance {
   0% {
-    color: #ffffff;
+    color: var(--color-heading);
   }
 
   50% {
@@ -759,7 +763,7 @@ body.dark-mode .lesson .project:hover {
   }
 
   100% {
-    color: #fff;
+    color: var(--color-heading);
   }
 }
 
@@ -1167,7 +1171,7 @@ footer p strong {
   font-size: 30px;
 }
 
-#details .layers p{
+#details .layers p {
   width: 80%;
   text-align: center;
   font-size: 25px;
@@ -1369,10 +1373,81 @@ footer p strong {
 */
 
 @media only screen and (max-width: 480px) {
-  
+  /* |=================  HOME PAGE  =================|*/
+
+  .slider {
+    width: 95%;
+    height: 140px;
+    margin: 0 auto;
+  }
+
+  .slider .slick-slider {
+    height: 140px;
+  }
+
+  .slider .slick-slider .slick-list {
+    height: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .slider .slick-slider .slick-list img {
+    height: 140px;
+    border-radius: 10px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+
+  .category-title h2 {
+    width: fit-content;
+    margin: 5px auto;
+  }
+
+  .category-title .under-line {
+    margin: 0 auto;
+  }
+
+  .category-box {
+    width: 30%;
+    margin: 13.563px auto;
+  }
+
+  .category-box img {
+    width: 80%;
+  }
+
+  .category-box h2 {
+    font-size: 22px;
+    margin: 10px 0 0;
+  }
+
+  /* |=================  LESSONS PAGE  =================|*/
+
+  .lessons .container {
+    overflow: hidden;
+  }
+
+  .lessons .lesson-row {
+    width: fit-content;
+    margin: 15px 0;
+  }
+
+  .lessons .row-lessons {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  .lessons .lesson-row .lesson-box {
+    width: 180px;
+    margin: 0 10px;
+  }
+
+  /* |=================  CONTACT PAGE  =================|*/
 }
 
 @media only screen and (max-width: 768) {
-  
 }
-
