@@ -1446,6 +1446,11 @@ footer p strong {
     margin: 0 10px;
   }
 
+   .lessons .lesson-row .lesson-box h3 {
+    font-size: 26px;
+    margin: 20px 0 0;
+   }
+
   /* |=================  CONTACT PAGE  =================|*/
 }
 
