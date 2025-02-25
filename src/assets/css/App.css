@@ -966,6 +966,7 @@ footer p strong {
 }
 
 #right {
+  margin-top: 34px;
   margin-left: 5px;
 }
 
@@ -1046,59 +1047,6 @@ footer p strong {
 
 .group {
   display: none;
-}
-
-.user {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.user button {
-  padding: 10px 25px;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #ffb932;
-  cursor: pointer;
-}
-
-#form {
-  background-color: transparent;
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 10px #fff;
-}
-
-#form form {
-  height: 100%;
-  width: 100%;
-  direction: rtl;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#form form input {
-  width: 300px;
-  font-family: vazir;
-  font-size: 18px;
-  padding: 10px;
-  outline: 0;
-  border: 0;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-#form form button {
-  width: 100%;
-  font-size: 18px;
-  padding: 10px;
 }
 
 /*
