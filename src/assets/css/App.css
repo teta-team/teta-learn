@@ -1446,12 +1446,82 @@ footer p strong {
     margin: 0 10px;
   }
 
-   .lessons .lesson-row .lesson-box h3 {
+  .lessons .lesson-row .lesson-box h3 {
     font-size: 26px;
     margin: 20px 0 0;
-   }
+  }
 
   /* |=================  CONTACT PAGE  =================|*/
+
+  .contact .container .board {
+    width: 390px;
+    height: 850px;
+    border: none;
+  }
+
+  .contact .container .board .screen {
+    flex-direction: column;
+  }
+
+  .contact .container .board .screen .right textarea {
+    max-width: 300px;
+    min-width: 300px;
+    margin-top: 30px;
+  }
+
+  .contact .container .board .title .text {
+    position: absolute;
+    top: -70px;
+  }
+
+  .contact .container .board .title .after-text {
+    border: none;
+  }
+
+  .contact .container .board .title .befor-text {
+    border: none;
+  }
+
+  .contact .container .board .screen .right {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .contact .container .board .screen .right button {
+    width: 90%;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .contact .container .board .screen .right .inputs {
+    flex-direction: column;
+  }
+
+  .contact .container .board .screen .right select {
+    width: 91%;
+  }
+
+  .contact .container .board .screen .right .inputs input {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .contact .container .board .screen .left img {
+    width: 300px;
+  }
+
+  .contact .container .board .screen .left {
+    width: 60%;
+    margin-right: 30px;
+  }
+
+  .contact .container .board .screen .right .inputs {
+    height: 70%;
+  }
+
+  .contact .container .board .title .text {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 768) {
