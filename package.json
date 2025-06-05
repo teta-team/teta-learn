@@ -5,10 +5,12 @@
   "dependencies": {
     "balancer": "^0.2.3",
     "cra-template": "1.2.0",
+    "iran-map": "^1.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
+    "react-svg-map": "^2.2.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.4"
   },
