@@ -1438,6 +1438,15 @@ footer p strong {
     font-size: 45px;
     font-weight: bold;
   }
+  
+  .categories {
+    flex-wrap: wrap;
+  }
+
+  .category-box {
+    width: 30%;
+    margin: 13.563px auto;
+  }
 
   #details h1 {
     color: var(--color-heading);
