@@ -16,7 +16,7 @@ function Home() {
           <h2>دسته بندی ها</h2>
           <div className="under-line"></div>
         </div>
-        <div className="categories d-flex row f-wrap">
+        <div className="categories d-flex row">
           <Category
             id="physics"
             name="فیزیک"

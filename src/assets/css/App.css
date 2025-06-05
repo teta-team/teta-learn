@@ -1358,6 +1358,10 @@ footer p strong {
     margin: 0 auto;
   }
 
+  .categories {
+    flex-wrap: wrap;
+  }
+
   .category-box {
     width: 30%;
     margin: 13.563px auto;
