@@ -14,6 +14,7 @@ import NotFound from "./pages/404";
 import ProjectsPage from "./pages/Projects";
 import IonDetails from "./pages/apps/ions/details";
 import { useEffect } from "react";
+import Questions from "./pages/Questions";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/lessons" element={<Lessons />} />
+          <Route path="/questions" element={<Questions />} />
           <Route path="/lessons/physics" element={<Physics />} />
           <Route path="/lessons/chemistry" element={<Chemistry />} />
           <Route path="/lessons/math" element={<MathPage />} />

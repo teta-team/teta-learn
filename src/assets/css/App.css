@@ -346,10 +346,15 @@ nav a:nth-child(2):hover ~ .line {
 }
 
 nav a:nth-child(3):hover ~ .line {
+  width: 70px;
+  transform: translateX(-105px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+nav a:nth-child(4):hover ~ .line {
   width: 85px;
-  -webkit-transform: translateX(-108px);
-  transform: translateX(-108px);
-  -webkit-transition: all 0.2s ease-in-out;
+  transform: translateX(-172px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
@@ -659,6 +664,212 @@ body.dark-mode .lesson .project:hover {
   height: 3px;
   background-color: var(--color-primary);
   border-radius: 25px;
+}
+
+/* |================  QUESTIONS PAGE =================|*/
+
+.questions .container .hero {
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.questions .container .hero .search-part {
+  width: 50%;
+}
+.questions .container .hero .search-part h1 {
+  margin-right: 40px;
+  margin-top: 160px;
+  letter-spacing: 1px;
+}
+
+.questions .container .hero .search-part span {
+  font-size: 40px;
+  font-weight: 600;
+  animation: color 4s infinite;
+}
+
+@keyframes color {
+  0% {
+    color: var(--color-heading);
+  }
+
+  50% {
+    color: var(--color-accent);
+  }
+
+  100% {
+    color: var(--color-heading);
+  }
+}
+
+.questions .container .hero .search-part .input input {
+  width: 240px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 600;
+  margin-right: 10px;
+  box-shadow: 0 0 5px #d7d7d7;
+}
+
+.questions .container .second-part {
+  width: 100%;
+  padding-left: -20px;
+}
+
+.questions .container .second-part .right {
+  padding: 20px;
+  width: 20%;
+  background-color: #25bff73a;
+  border-radius: 0 12px 12px 12px;
+  margin-right: -50px;
+}
+
+.questions .container .second-part .right .Lessons button {
+  margin-bottom: 10px;
+  border-radius: 0 12px 12px 12px;
+  padding: 15px;
+  background-color: var(--color-accent);
+  border: none;
+  outline: none;
+  color: var(--color-heading);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.questions .container .second-part .right .Lessons button:hover {
+  background-color: var(--color-secondary);
+}
+
+.questions .container .second-part .right .Lessons button:active {
+  background-color: var(--color-primary);
+}
+
+.questions .container .second-part .left {
+  width: 80%;
+  margin-top: -20px;
+}
+
+.questions .container .second-part .left .categories {
+  width: 100%;
+}
+
+.questions .container .second-part .left .categories .model {
+  width: 51%;
+  background-color: #25bff73a;
+  height: 60px;
+  border-radius: 12px 0 12px 12px;
+  padding: 10px 15px;
+}
+
+.questions .container .second-part .left .categories .model button {
+  border: 1px #3636367e solid;
+  color: var(--color-default);
+  width: 50%;
+  cursor: pointer;
+  border-radius: 12px 0 0 12px;
+  background-color: var(--color-accent);
+  font-size: 20px;
+}
+
+.questions .container .second-part .left .categories .model :first-child {
+  border-radius: 0 0 12px 0;
+}
+
+.questions .container .second-part .left .categories .model button:active {
+  background-color: var(--color-primary);
+}
+
+.questions .container .second-part .left .categories .model button:hover{
+  background-color: var(--color-secondary);
+}
+
+.questions .container .second-part .left .categories .year {
+  width: 15%;
+  margin-right: 10px;
+}
+
+
+.questions .container .second-part .left .categories .year select {
+  padding: 20px;
+  background-color: #25bff73a;
+  color: var(--color-default);
+  border: none;
+  border-radius: 12px 12px 12px 12px;
+  height: 80px;
+  font-size: 20px;
+}
+
+.questions .container .second-part .left .categories .class {
+  width: 15%;
+  margin-right: 20px;
+}
+
+.questions .container .second-part .left .categories .class select {
+  padding: 20px;
+  background-color: #25bff73a;
+  color: var(--color-default);
+  border: none;
+  border-radius: 12px 12px 12px 12px;
+  height: 80px;
+  font-size: 20px;
+}
+
+.questions .container .second-part .left .categories .Scientific-field {
+  width: 15%;
+  margin-right: -20px;
+}
+
+.questions .container .second-part .left .categories .Scientific-field select {
+  padding: 20px 10px;
+  background-color: #25bff73a;
+  color: var(--color-default);
+  border: none;
+  border-radius: 12px 12px 12px 12px;
+  height: 80px;
+  font-size: 20px;
+}
+
+.questions .container .second-part .left .files {
+  width: 100%;
+}
+
+.questions .container .second-part .left .files .box {
+  width: 21%;
+  height: 370px;
+  background-color: #25bff73a;
+  margin-right: 9px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.questions .container .second-part .left .files .box img {
+  width: 200px;
+  height: 170px;
+  border-radius: 12px;
+}
+
+.questions .container .second-part .left .files .box h3 {
+  font-size: 16px;
+}
+
+.questions .container .second-part .left .files .box .buttons button {
+  padding: 5px 38px;
+  border: none;
+  color: var(--color-default);
+  cursor: pointer;
+}
+
+.questions .container .second-part .left .files .box .buttons button:first-child  {
+ border-radius: 0 12px 12px 0;
+ background-color: var(--color-secondary);
+}
+
+.questions .container .second-part .left .files .box .buttons button:last-child {
+   border-radius: 12px 0 0 12px;
+   background-color: #01c342;
 }
 
 /*
@@ -1438,41 +1649,35 @@ footer p strong {
 |------------------------------------------------------|
 */
 
-  
-@media only screen and (max-width: 768px) {
-  .slider .slick-slider {
-    height: 300px;
+  @media only screen and (max-width: 768px) {
+    .slider .slick-slider {
+      height: 300px;
+    }
+    .slider .slick-slider .slick-list img {
+      height: 300px;
+      border-radius: 10px;
+    }
+    .slider .slick-slider .slick-list {
+      height: 300px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
   }
-  .slider .slick-slider .slick-list img {
-    height: 300px;
-    border-radius: 10px;
+
+  @media only screen and (max-width: 1024px) {
+    .categories.f-wrap {
+      flex-wrap: nowrap;
+    }
+    .container {
+      max-width: 100%;
+    }
+    .lesson .project {
+      background-color: var(--color-background);
+      width: 25%;
+    }
   }
-  .slider .slick-slider .slick-list {
-    height: 300px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
 
-
-}
-
-
-
-@media only screen and (max-width: 1024px) {
-  .categories.f-wrap {
-    flex-wrap: nowrap;
-  }
-  .container {
-    max-width: 100%;
-  }
-  .lesson .project {
-    background-color: var(--color-background);
-    width: 25%;
-  }
-}
-
-
-@media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     /* |=================  HOME PAGE  =================|*/
 
     .slider {
