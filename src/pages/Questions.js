@@ -60,7 +60,7 @@ function Questions() {
                 <div className="box">
                   <img src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg" />
                   <h3>نام دبیر : رضا اسدی</h3>
-                  <h3>نام مدرسه : هاروارد</h3>
+                  <h3>نام مدرسه : طالقانی</h3>
                   <h3>نوع امتحان : ترم دو - داخلی</h3>
                   <div className="buttons">
                     <button>
@@ -94,7 +94,7 @@ function Questions() {
                 <div className="box">
                   <img src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg" />
                   <h3>نام دبیر : رضا اسدی</h3>
-                  <h3>نام مدرسه : هاروارد</h3>
+                  <h3>نام مدرسه : طالقانی</h3>
                   <h3>نوع امتحان : ترم دو - داخلی</h3>
                   <div className="buttons">
                     <button>
@@ -128,7 +128,7 @@ function Questions() {
                 <div className="box">
                   <img src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg" />
                   <h3>نام دبیر : رضا اسدی</h3>
-                  <h3>نام مدرسه : هاروارد</h3>
+                  <h3>نام مدرسه : طالقانی</h3>
                   <h3>نوع امتحان : ترم دو - داخلی</h3>
                   <div className="buttons">
                     <button>
@@ -160,9 +160,9 @@ function Questions() {
                   </div>
                 </div>
                 <div className="box">
-                  <img src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg" />
+                  <img src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg" alt="" />
                   <h3>نام دبیر : رضا اسدی</h3>
-                  <h3>نام مدرسه : هاروارد</h3>
+                  <h3>نام مدرسه : طالقانی</h3>
                   <h3>نوع امتحان : ترم دو - داخلی</h3>
                   <div className="buttons">
                     <button>

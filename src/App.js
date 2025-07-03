@@ -15,6 +15,7 @@ import ProjectsPage from "./pages/Projects";
 import IonDetails from "./pages/apps/ions/details";
 import { useEffect } from "react";
 import Questions from "./pages/Questions";
+import Chat from "./pages/chat";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/questions" element={<Questions />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/lessons/physics" element={<Physics />} />
           <Route path="/lessons/chemistry" element={<Chemistry />} />
           <Route path="/lessons/math" element={<MathPage />} />
