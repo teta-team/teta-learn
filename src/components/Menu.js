@@ -41,6 +41,7 @@ function Menu() {
         <Link to="/">خانه</Link>
         <Link to="/lessons">دروس</Link>
         <Link to="/questions">سوالات</Link>
+        <Link to="/chat">پرسش و پاسخ</Link>
         <Link to="/contact">ارتباط با ما</Link>
         <div className="line"></div>
       </nav>

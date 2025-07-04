@@ -243,6 +243,11 @@ button {
   font-size: 28px;
 }
 
+  
+select option {
+  color: #212324;
+}
+
 /*
 |------------------------------------------------------|
 |====================|  PATTERNS  |====================|
@@ -353,8 +358,15 @@ nav a:nth-child(3):hover ~ .line {
 }
 
 nav a:nth-child(4):hover ~ .line {
-  width: 85px;
-  transform: translateX(-172px);
+  width: 110px;
+  transform: translateX(-175px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+nav a:nth-child(5):hover ~ .line {
+  width: 90px;
+  transform: translateX(-282px);
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
@@ -709,9 +721,11 @@ body.dark-mode .lesson .project:hover {
   outline: none;
   border-radius: 20px;
   color: #000;
+  background-color: #fdfdfd;
   font-weight: 600;
   margin-right: 10px;
-  box-shadow: 0 0 5px #d7d7d7;
+  box-shadow: 0 0 5px #d1d1d1;
+  font-family: var(--font-default);
 }
 
 .questions .container .second-part {
@@ -720,14 +734,20 @@ body.dark-mode .lesson .project:hover {
 }
 
 .questions .container .second-part .right {
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   width: 20%;
   background-color: #25bff73a;
   border-radius: 0 12px 12px 12px;
   margin-right: -50px;
 }
 
+.questions .container .second-part .right h2 {
+  text-align: center;
+  margin-top: -10px;
+}
+
 .questions .container .second-part .right .Lessons button {
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 0 12px 12px 12px;
   padding: 15px;
@@ -774,16 +794,20 @@ body.dark-mode .lesson .project:hover {
   font-size: 20px;
 }
 
-.questions .container .second-part .left .categories .model :first-child {
+.questions .container .second-part .left .categories .model button:first-child {
   border-radius: 0 0 12px 0;
+}
+
+.questions .container .second-part .left .categories .model button {
+  background-color: var(--color-accent);
+}
+
+.questions .container .second-part .left .categories .model button:hover {
+  background-color: var(--color-secondary);
 }
 
 .questions .container .second-part .left .categories .model button:active {
   background-color: var(--color-primary);
-}
-
-.questions .container .second-part .left .categories .model button:hover{
-  background-color: var(--color-secondary);
 }
 
 .questions .container .second-part .left .categories .year {
@@ -791,15 +815,16 @@ body.dark-mode .lesson .project:hover {
   margin-right: 10px;
 }
 
-
 .questions .container .second-part .left .categories .year select {
-  padding: 20px;
+  padding: 20px 16px;
   background-color: #25bff73a;
   color: var(--color-default);
   border: none;
-  border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
   height: 80px;
   font-size: 20px;
+  font-family: vazir;
+  outline: none;
 }
 
 .questions .container .second-part .left .categories .class {
@@ -808,13 +833,15 @@ body.dark-mode .lesson .project:hover {
 }
 
 .questions .container .second-part .left .categories .class select {
-  padding: 20px;
+  padding: 20px 16px;
   background-color: #25bff73a;
   color: var(--color-default);
   border: none;
-  border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
   height: 80px;
   font-size: 20px;
+  font-family: vazir;
+  outline: none;
 }
 
 .questions .container .second-part .left .categories .Scientific-field {
@@ -827,9 +854,11 @@ body.dark-mode .lesson .project:hover {
   background-color: #25bff73a;
   color: var(--color-default);
   border: none;
-  border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
   height: 80px;
   font-size: 20px;
+  font-family: vazir;
+  outline: none;
 }
 
 .questions .container .second-part .left .files {
@@ -857,19 +886,224 @@ body.dark-mode .lesson .project:hover {
 
 .questions .container .second-part .left .files .box .buttons button {
   padding: 5px 38px;
-  border: none;
+  border: 1px #d8d8d866 solid;
   color: var(--color-default);
   cursor: pointer;
 }
 
-.questions .container .second-part .left .files .box .buttons button:first-child  {
- border-radius: 0 12px 12px 0;
- background-color: var(--color-secondary);
+.questions
+  .container
+  .second-part
+  .left
+  .files
+  .box
+  .buttons
+  button:first-child {
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(#399bfd, var(--color-secondary), #3c9cfc);
 }
 
-.questions .container .second-part .left .files .box .buttons button:last-child {
-   border-radius: 12px 0 0 12px;
-   background-color: #01c342;
+.questions
+  .container
+  .second-part
+  .left
+  .files
+  .box
+  .buttons
+  button:last-child {
+  border-radius: 12px 0 0 12px;
+  background: linear-gradient(#36be63, #02b83f, #48c371);
+}
+
+/*
+|----------------------------------------------------|
+|=====================|  CHAT  |=====================|
+|----------------------------------------------------|
+*/
+
+.chat .Channels {
+  width: 25%;
+  height: 700px;
+  background-color: #25bff73a;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.chat .Message-section {
+  width: 50%;
+  height: 700px;
+}
+
+.chat .Message-section .Messages {
+  width: 93.5%;
+  height: 620px;
+  background-color: #25bff73a;
+  border-radius: 12px;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow-y: auto;
+}
+
+.chat .Message-section .Messages .title {
+  background-color: #2cc0f63a;
+  border-radius: 12px 12px 0 0;
+  height: 50px;
+}
+
+.chat .Contacts .title {
+  background-color: #2cc0f63a;
+  border-radius: 12px 12px 0 0;
+  height: 50px;
+}
+
+.chat .Channels .title {
+  background-color: #2cc0f63a;
+  border-radius: 12px 12px 0 0;
+  height: 50px;
+}
+
+.chat .Channels ul {
+  padding: 0 10px;
+}
+
+.chat .Channels ul .channel {
+  background-color: #25bff73a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.chat .Channels ul .channel:hover {
+  filter: brightness(90%);
+  transform: scale(102%);
+  transition: all 0.2s ease;
+}
+
+.chat .Channels ul .channel img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chat .Channels ul .channel h3 {
+  margin: 0;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.chat .add button {
+  width: 90%;
+  padding: 5px 0;
+  margin: 5px 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: #6fdb93;
+  font-size: 18px;
+}
+
+.chat .Message-section .Send-section input {
+  width: 60%;
+  height: 30px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  font-family: vazir;
+  outline: none;
+  border: none;
+  background-color: #3dc8fa3a;
+  color: var(--color-default);
+}
+
+.chat .Message-section .Send-section button {
+  padding: 10px 25px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #3dc8fa3a;
+  cursor: pointer;
+  color: var(--color-default);
+}
+
+.chat .Contacts {
+  width: 25%;
+  height: 700px;
+  background-color: #25bff73a;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.chat .Contacts ul {
+  padding: 0 10px;
+}
+
+.chat .Contacts ul .user {
+  background-color: #25bff73a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.chat .Contacts ul .user:hover {
+  filter: brightness(90%);
+  transform: scale(102%);
+  transition: all 0.2s ease;
+}
+
+.chat .Contacts ul .user img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chat .Contacts ul .user h3 {
+  margin: 0;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.chat .Message-section .Messages .Message {
+  padding: 10px 10px 10px 20px;
+}
+
+.chat .Message-section .Messages .Message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chat .img-name {
+  margin-bottom: 8px;
+}
+
+.chat .img-name h4 {
+  margin: 0;
+  margin-right: 5px;
+}
+
+.chat .Message-section .Messages .Message .file {
+  width: 98%;
+  border-radius: 12px 0 12px 12px;
+  background-color: #25bff73a;
+  padding: 5px 10px;
+}
+
+.chat .Message-section .Messages .Message .file h5 {
+  text-align: justify;
 }
 
 /*
@@ -1535,6 +1769,7 @@ footer p strong {
     left: 0;
     transform: translateY(-50%);
   }
+
   #details .shape .g-box:nth-child(2) {
     width: 50px;
     height: 10px;
@@ -1546,6 +1781,7 @@ footer p strong {
     left: 50%;
     transform: translateX(-50%);
   }
+
   #details .shape .g-box:nth-child(3) {
     width: 10px;
     height: 50px;
@@ -1557,6 +1793,7 @@ footer p strong {
     right: 0;
     transform: translateY(-50%);
   }
+
   #details .shape .g-box:nth-child(4) {
     width: 50px;
     height: 10px;
@@ -1860,12 +2097,211 @@ footer p strong {
       width: 80%;
     }
 
-    footer p {
-      font-size: 13px;
+    /*
+|---------------------------------------------------|
+|===================|  QUESTION  |==================|
+|---------------------------------------------------|
+*/
+
+    .questions .container .second-part .right .Lessons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
 
-    #go-top i {
-      font-size: 22px;
+    .questions .container .second-part .right .Lessons button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 0 12px 12px 12px;
+      padding: 15px;
+      background-color: var(--color-accent);
+      border: none;
+      outline: none;
+      color: var(--color-heading);
+      font-size: 20px;
+      cursor: pointer;
     }
+
+    .questions .container .second-part .right .Lessons button:hover {
+      background-color: var(--color-secondary);
+    }
+
+    .questions .container .second-part .right .Lessons button:active {
+      background-color: var(--color-primary);
+    }
+
+    .questions .container .second-part .left {
+      width: 80%;
+      margin-top: -20px;
+    }
+
+    .questions .container .hero {
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+
+    .questions .container .hero .search-part {
+      width: 100%;
+      text-align: center;
+    }
+
+    .questions .container .hero .search-part h1 {
+      margin: 20px 0;
+    }
+
+    .questions .container .second-part {
+      flex-direction: column;
+    }
+
+    .questions .container .second-part .right {
+      width: 90%;
+      height: 10px;
+      margin-right: 0;
+      border-radius: 12px;
+    }
+
+    .questions .container .second-part .right h2 {
+      margin-bottom: 50px;
+    }
+
+    .questions .container .second-part .left {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .questions .container .second-part .left .categories {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .second-part .left .categories .class select {
+      width: 300%;
+    }
+
+    .questions .container .second-part .left .categories > div {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .questions .container .second-part .left .files .box {
+      width: 70%;
+      margin: 10px 0;
+    }
+
+    .questions .container .second-part .left .files .box img {
+      width: 80%;
+      margin: 0 31px;
+    }
+
+    .questions .container .second-part .left .files .box h3 {
+      margin-top: -6px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .questions .container .second-part .left .files .box .buttons button {
+      width: 50%;
+    }
+
+    .questions
+      .containe
+      .second-part
+      .left
+      .categories
+      .Scientific-field
+      select {
+      margin-right: 50px;
+    }
+
+    .questions .container .second-part .left .categories .model {
+      border-radius: 12px 12px 12px 12px;
+    }
+
+    .questions
+      .container
+      .second-part
+      .left
+      .categories
+      .model
+      button:first-child {
+      border-radius: 0 12px 12px 0;
+    }
+
+    .questions .container .second-part .left .categories select {
+      width: 100%;
+    }
+
+    .questions .container .second-part .left .categories .year {
+      width: 150px;
+      margin-right: 0;
+    }
+
+    .questions .container .second-part .left .categories .class{
+      width: 260px ;
+      margin: 0;
+    }
+
+    .questions .container .second-part .left .categories .Scientific-field{
+      width: 150px ;
+      margin: 0;
+    }
+    
+  }
+
+  /*
+|----------------------------------------------|
+|===================|  CHAT |==================|
+|----------------------------------------------|
+*/
+
+  .chat {
+    flex-wrap: wrap;
+  }
+
+  .chat .Channels {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .chat .Message-section {
+    order: 3;
+    width: 99%;
+  }
+
+  .chat .Contacts {
+    height: 300px;
+    order: 2;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .chat .Message-section {
+    width: 100%;
+    height: 500px;
+  }
+
+  .chat .Message-section .Messages {
+    margin-bottom: 10px;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .chat .Message-section .Send-section input {
+    width: 50%;
+  }
+
+  .chat .Message-section .Send-section button {
+    width: 18%;
+    padding: 10px 10px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  #go-top i {
+    font-size: 22px;
   }
 }
