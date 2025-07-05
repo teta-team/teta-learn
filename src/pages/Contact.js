@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import supabase from "../supabase";
+// import supabase from "../supabase";
 
 function Contact() {
   const nameRef = useRef(null);
@@ -23,18 +23,18 @@ function Contact() {
     ) {
       alert("لطفا مقادیر لازم را پر کنید!");
     } else {
-      const { data, error } = await supabase
-        .from("requests")
-        .insert([
-          {
-            name: userName,
-            phone: userPhone,
-            email: userEmail,
-            lesson: userLesson,
-            text: userText,
-          },
-        ])
-        .select();
+      // const { data, error } = await supabase
+      //   .from("requests")
+      //   .insert([
+      //     {
+      //       name: userName,
+      //       phone: userPhone,
+      //       email: userEmail,
+      //       lesson: userLesson,
+      //       text: userText,
+      //     },
+      //   ])
+      //   .select();
 
       nameRef.current.value = "";
       phoneRef.current.value = "";

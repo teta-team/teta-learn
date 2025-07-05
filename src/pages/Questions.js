@@ -1,64 +1,72 @@
 import IranMap from "../components/IranMap";
+import { useState } from "react";
 
 function Questions() {
-  return (
-    <>
-      <div className="questions">
-        <div className="container">
-          <div className="hero d-flex row justify-content-between  ">
-            <div className="search-part d-flex column justify-content-evenly align-items-center">
-              <h1>
-                سوالات <span>استان </span>خود را بیابید
-              </h1>
+  const [isMinimized, setIsMinimized] = useState(false);
 
-              <div className="input">
-                <input placeholder="نام استان را وارد کنید"></input>
-              </div>
+  const toggleCategoriesHeight = () => {
+    setIsMinimized(!isMinimized);
+  };
+
+
+  return (
+    <div className="questions">
+      <div className="container">
+        {/* بخش بالایی (جستجو و مپ) */}
+        <div className="hero d-flex row justify-content-between">
+          <div className="search-part d-flex column justify-content-evenly align-items-center">
+            <h1>
+              سوالات <span>استان </span>خود را بیابید
+            </h1>
+            <div className="input">
+              <input placeholder="نام استان را وارد کنید" />
+            </div>
+          </div>
+          <div className="Map"></div>
+        </div>
+
+        {/* بخش اصلی صفحه */}
+        <div className="second-part d-flex row justify-content-evenly">
+          {/* بخش سمت راست (دسته‌بندی) */}
+          <div
+            className="right"
+            style={{
+              height: !isMinimized ? "10px" : "auto",
+              overflow: "hidden",
+              transition: "height 0.3s ease",
+              
+            }}
+          >
+            <h2 onClick={toggleCategoriesHeight} style={{ cursor: "pointer" }}>
+              دسته بندی :
+            </h2>
+            <div className="Lessons d-flex column justify-content-evenly">
+              <button>ریاضی</button>
+              <button>فیزیک</button>
+              <button>شیمی</button>
+              <button>زیست</button>
+              <button>هندسه</button>
             </div>
             <div className="Map">
               <IranMap />
             </div>
           </div>
-          <div className="second-part d-flex row justify-content-evenly">
-            <div className="right">
-              <h2>دسته بندی :</h2>
-              <div className="Lessons d-flex column justify-content-evenly">
-                <button>ریاضی</button>
-                <button>فیزیک</button>
-                <button>شیمی</button>
-                <button>زیست</button>
-                <button>هندسه</button>
+
+          {/* بخش سمت چپ (فیلترها و کارت‌ها) */}
+          <div className="left d-flex column">
+            <div className="categories d-flex row justify-content-between">
+              <div className="model d-flex row">
+                <button>ترم یک</button>
+                <button>ترم دو</button>
               </div>
-            </div>
-            <div className="left d-flex column">
-              <div className="categories d-flex row justify-content-between">
-                <div className="model d-flex row">
-                  <button>ترم یک</button>
-                  <button>ترم دو</button>
-                </div>
-                <div className="year">
-                  <select>
-                    <option>1403-1404</option>
-                    <option>1402-1403</option>
-                    <option>1401-1402</option>
-                    <option>1400-1401</option>
-                    <option>1399-1400</option>
-                  </select>
-                </div>
-                <div className="class">
-                  <select>
-                    <option>دهم</option>
-                    <option>یازدهم</option>
-                    <option>دوازدهم</option>
-                  </select>
-                </div>
-                <div className="Scientific-field">
-                  <select>
-                    <option>ریاضی-فیزیک</option>
-                    <option>تجربی</option>
-                    <option>انسانی</option>
-                  </select>
-                </div>
+              <div className="year">
+                <select>
+                  <option>1403-1404</option>
+                  <option>1402-1403</option>
+                  <option>1401-1402</option>
+                  <option>1400-1401</option>
+                  <option>1399-1400</option>
+                </select>
               </div>
               <div className="files d-flex row justify-content-evenly f-wrap">
                 <div className="box">
@@ -168,6 +176,33 @@ function Questions() {
                   <h3>نام دبیر : رضا اسدی</h3>
                   <h3>نام مدرسه : هاروارد</h3>
                   <h3>نوع امتحان : ترم دو - داخلی</h3>
+              <div className="class">
+                <select>
+                  <option>دهم</option>
+                  <option>یازدهم</option>
+                  <option>دوازدهم</option>
+                </select>
+              </div>
+              <div className="Scientific-field">
+                <select>
+                  <option>ریاضی-فیزیک</option>
+                  <option>تجربی</option>
+                  <option>انسانی</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="files d-flex row justify-content-evenly f-wrap">
+              {/* کارت‌های نمونه */}
+              {[1, 2, 3, 4].map((item) => (
+                <div className="box" key={item}>
+                  <img
+                    src="https://www.urduinc.com/Content/assets/images/encyclopedia/25.jpg"
+                    alt="نمونه سوال"
+                  />
+                  <h3>نام دبیر: رضا اسدی</h3>
+                  <h3>نام مدرسه: طالقانی</h3>
+                  <h3>نوع امتحان: ترم دو - داخلی</h3>
                   <div className="buttons">
                     <button>
                       <svg
@@ -197,12 +232,12 @@ function Questions() {
                     </button>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
