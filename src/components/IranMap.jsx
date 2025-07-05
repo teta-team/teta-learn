@@ -21,12 +21,20 @@ const useMouse = () => {
   return mousePosition;
 };
 
-const IranMap = () => {
+const IranMap = ({ onProvinceSelect }) => {
   const { x, y } = useMouse();
   const [provinces] = useState(() => iranProvinces);
   const [provinceName, setProvinceName] = useState("");
   const [mapZoom, setMapZoom] = useState(false);
   const [selectedProvince, setSelectedProvince] = useState(null);
+
+  const handleProvinceClick = (provinceId) => {
+    setSelectedProvince(provinceId);
+    const province = provinces.find((p) => p.id === provinceId);
+    if (onProvinceSelect && province) {
+      onProvinceSelect(province.name);
+    }
+  };
 
   useEffect(() => {
     if (selectedProvince) {
@@ -37,7 +45,6 @@ const IranMap = () => {
 
   return (
     <div className="iran-map">
-      {/* حذف `<style jsx>` و استفاده از استایل معمولی */}
       <span
         className={styles.show_title}
         style={{
@@ -83,7 +90,7 @@ const IranMap = () => {
                   d={province.d}
                   onMouseOver={() => setProvinceName(province.name)}
                   onMouseLeave={() => setProvinceName("")}
-                  onClick={() => setSelectedProvince(province.id)}
+                  onClick={() => handleProvinceClick(province.id)}
                 />
               ))}
             </g>
