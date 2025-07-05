@@ -202,6 +202,7 @@ h6 {
 a {
   text-decoration: none;
   color: var(--color-default);
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -380,6 +381,54 @@ header button {
 header button i {
   color: var(--color-default);
   font-size: 20px;
+}
+
+.menu-list-icon {
+  display: none;
+  z-index: 2000;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 768px){
+  .menu-list-icon {
+    display: unset;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    flex-direction: column !important;
+    z-index: 1000;
+    background-color: var(--color-background);
+    padding-top: 50px;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+
+  nav a {
+    margin-right: 10px;
+    width: 200px;
+  }
+
+  nav.active {
+    width: 50%;
+    transition: all .3s ease;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
 }
 
 /*
