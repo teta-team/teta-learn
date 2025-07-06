@@ -20,7 +20,7 @@ function Questions() {
               </h1>
             ) : (
               <h1>
-                سوالات <span>استان {selectedProvince}</span> را بیابید
+                سوالات <span>استان {selectedProvince}</span> :
               </h1>
             )}
           </div>

@@ -9,14 +9,17 @@ const useMouse = () => {
   useEffect(() => {
     function handle(e) {
       setMousePosition({
-        x: e.pageX,
-        y: e.pageY,
+        x: e.clientX,
+        y: e.clientY,
       });
     }
-    const mapEffect = document.querySelector("svg");
-    mapEffect.addEventListener("mousemove", handle);
-    return () => document.removeEventListener("mousemove", handle);
-  }, [setMousePosition]);
+
+    window.addEventListener("mousemove", handle);
+
+    return () => {
+      window.removeEventListener("mousemove", handle);
+    };
+  }, []);
 
   return mousePosition;
 };
@@ -48,6 +51,7 @@ const IranMap = ({ onProvinceSelect }) => {
       <span
         className={styles.show_title}
         style={{
+          position: "fixed",
           left: `${x + 5}px`,
           top: `${y + 5}px`,
           zIndex: 999,
