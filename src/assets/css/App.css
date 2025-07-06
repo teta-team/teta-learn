@@ -384,7 +384,7 @@ header button i {
 
 .menu-list-icon {
   display: none;
-  z-index: 2000;
+  z-index: 20000;
 }
 
 .mobile-nav {
@@ -402,7 +402,7 @@ header button i {
     right: 0;
     height: 100vh;
     flex-direction: column !important;
-    z-index: 1000;
+    z-index: 10000;
     background-color: var(--color-background);
     padding-top: 50px;
     width: 0;
@@ -610,7 +610,7 @@ body.dark-mode .lessons a:hover {
 
 .lesson .project {
   background-color: var(--color-background);
-  width: 20%;
+  width: 19%;
   margin: 14.2px;
   padding: 15px;
   border: 1px solid var(--color-primary);
@@ -1936,484 +1936,437 @@ footer p strong {
     font-size: 40px;
     margin: 0;
   }
+}
 
-  /*
+/*
 |------------------------------------------------------|
 |===================|  RESPONSIVE  |===================|
 |------------------------------------------------------|
 */
 
-  @media only screen and (max-width: 768px) {
-    .slider .slick-slider {
-      height: 300px;
-    }
-    .slider .slick-slider .slick-list img {
-      height: 300px;
-      border-radius: 10px;
-    }
-    .slider .slick-slider .slick-list {
-      height: 300px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+@media only screen and (max-width: 768px) {
+  .slider .slick-slider {
+    height: 300px;
+  }
+  .slider .slick-slider .slick-list img {
+    height: 300px;
+    border-radius: 10px;
+  }
+  .slider .slick-slider .slick-list {
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .categories.f-wrap {
+    flex-wrap: nowrap;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .lesson .project {
+    background-color: var(--color-background);
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* |=================  HOME PAGE  =================|*/
+
+  .slider {
+    width: 95%;
+    height: 140px;
+    margin: 0 auto;
   }
 
-  @media only screen and (max-width: 1024px) {
-    .categories.f-wrap {
-      flex-wrap: nowrap;
-    }
-    .container {
-      max-width: 100%;
-    }
-    .lesson .project {
-      background-color: var(--color-background);
-      width: 25%;
-    }
+  .slider .slick-slider {
+    height: 140px;
   }
 
-  @media only screen and (max-width: 480px) {
-    /* |=================  HOME PAGE  =================|*/
+  .slider .slick-slider .slick-list {
+    height: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 
-    .slider {
-      width: 95%;
-      height: 140px;
-      margin: 0 auto;
-    }
+  .slider .slick-slider .slick-list img {
+    height: 140px;
+    border-radius: 10px;
+  }
 
-    .slider .slick-slider {
-      height: 140px;
-    }
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
 
-    .slider .slick-slider .slick-list {
-      height: 140px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+  .categories.f-wrap {
+    flex-wrap: wrap;
+  }
 
-    .slider .slick-slider .slick-list img {
-      height: 140px;
-      border-radius: 10px;
-    }
+  .category-title h2 {
+    width: fit-content;
+    margin: 5px auto;
+  }
 
-    .slick-prev:before,
-    .slick-next:before {
-      display: none;
-    }
+  .category-title .under-line {
+    margin: 0 auto;
+  }
 
-    .categories.f-wrap {
-      flex-wrap: wrap;
-    }
+  .category-box {
+    width: 30%;
+    margin: 13.563px auto;
+  }
 
-    .category-title h2 {
-      width: fit-content;
-      margin: 5px auto;
-    }
+  .category-box img {
+    width: 80%;
+  }
 
-    .category-title .under-line {
-      margin: 0 auto;
-    }
+  .category-box h2 {
+    font-size: 22px;
+    margin: 10px 0 0;
+  }
 
-    .category-box {
-      width: 30%;
-      margin: 13.563px auto;
-    }
+  /* |=================  LESSONS PAGE  =================|*/
 
-    .category-box img {
-      width: 80%;
-    }
+  .lessons .container {
+    overflow: hidden;
+  }
 
-    .category-box h2 {
-      font-size: 22px;
-      margin: 10px 0 0;
-    }
+  .lessons .lesson-row {
+    width: fit-content;
+    margin: 15px 0;
+  }
 
-    /* |=================  LESSONS PAGE  =================|*/
+  .lessons .row-lessons {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
 
-    .lessons .container {
-      overflow: hidden;
-    }
+  .lessons .lesson-row .lesson-box {
+    width: 180px;
+    margin: 0 10px;
+  }
 
-    .lessons .lesson-row {
-      width: fit-content;
-      margin: 15px 0;
-    }
+  .lessons .lesson-row .lesson-box h3 {
+    font-size: 26px;
+    margin: 20px 0 0;
+  }
 
-    .lessons .row-lessons {
-      width: 100%;
-      overflow-x: scroll;
-      scrollbar-width: none;
-    }
+  .lesson .lab-title h2 {
+    width: fit-content;
+    margin: 5px auto;
+  }
 
-    .lessons .lesson-row .lesson-box {
-      width: 180px;
-      margin: 0 10px;
-    }
+  .lesson .lab-title .under-line {
+    margin: 10px auto;
+  }
 
-    .lessons .lesson-row .lesson-box h3 {
-      font-size: 26px;
-      margin: 20px 0 0;
-    }
+  .lesson .project {
+    width: 60%;
+    margin: 14.2px auto;
+  }
 
-    .lesson .lab-title h2 {
-      width: fit-content;
-      margin: 5px auto;
-    }
+  /* |=================  CONTACT PAGE  =================|*/
 
-    .lesson .lab-title .under-line {
-      margin: 10px auto;
-    }
+  .contact .container .board {
+    width: 390px;
+    height: 850px;
+    border: none;
+  }
 
-    .lesson .project {
-      width: 60%;
-      margin: 14.2px auto;
-    }
+  .contact .container .board .screen {
+    flex-direction: column;
+  }
 
-    /* |=================  CONTACT PAGE  =================|*/
+  .contact .container .board .screen .right textarea {
+    max-width: 300px;
+    min-width: 300px;
+    margin-top: 30px;
+    margin-right: 15px;
+  }
 
-    .contact .container .board {
-      width: 390px;
-      height: 850px;
-      border: none;
-    }
+  .contact .container .board .title .text {
+    position: absolute;
+    top: -70px;
+    text-align: center;
+    margin-right: 10px;
+  }
 
-    .contact .container .board .screen {
-      flex-direction: column;
-    }
+  .contact .container .board .title .after-text {
+    border: none;
+  }
 
-    .contact .container .board .screen .right textarea {
-      max-width: 300px;
-      min-width: 300px;
-      margin-top: 30px;
-      margin-right: 15px;
-    }
+  .contact .container .board .title .befor-text {
+    border: none;
+  }
 
-    .contact .container .board .title .text {
-      position: absolute;
-      top: -70px;
-      text-align: center;
-      margin-right: 10px;
-    }
+  .contact .container .board .screen .right {
+    margin-top: 20px;
+    width: 90%;
+  }
 
-    .contact .container .board .title .after-text {
-      border: none;
-    }
+  .contact .container .board .screen .right button {
+    width: 90%;
+    padding: 18px;
+    border-radius: 12px;
+    margin-right: 15px;
+  }
 
-    .contact .container .board .title .befor-text {
-      border: none;
-    }
+  .contact .container .board .screen .right .inputs {
+    flex-direction: column;
+    margin-right: 15px;
+  }
 
-    .contact .container .board .screen .right {
-      margin-top: 20px;
-      width: 90%;
-    }
+  .contact .container .board .screen .right select {
+    width: 91%;
+  }
 
-    .contact .container .board .screen .right button {
-      width: 90%;
-      padding: 18px;
-      border-radius: 12px;
-      margin-right: 15px;
-    }
+  .contact .container .board .screen .right .inputs input {
+    width: 80%;
+    margin-bottom: 15px;
+  }
 
-    .contact .container .board .screen .right .inputs {
-      flex-direction: column;
-      margin-right: 15px;
-    }
+  .contact .container .board .screen .left img {
+    width: 90%;
+  }
 
-    .contact .container .board .screen .right select {
-      width: 91%;
-    }
+  .contact .container .board .screen .left {
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .contact .container .board .screen .right .inputs input {
-      width: 80%;
-      margin-bottom: 15px;
-    }
+  .contact .container .board .screen .right .inputs {
+    height: 70%;
+  }
 
-    .contact .container .board .screen .left img {
-      width: 300px;
-    }
+  .contact .container .board .title .text {
+    width: 80%;
+  }
 
-    .contact .container .board .screen .left {
-      width: 60%;
-      margin-right: 30px;
-    }
-
-    .contact .container .board .screen .right .inputs {
-      height: 70%;
-    }
-
-    .contact .container .board .title .text {
-      width: 80%;
-    }
-
-    /*
+  /*
 |---------------------------------------------------|
 |===================|  QUESTION  |==================|
 |---------------------------------------------------|
 */
 
-    .questions .container .second-part .right .Lessons {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-
-    .questions .container .second-part .right .Lessons button {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 0 12px 12px 12px;
-      padding: 15px;
-      background-color: var(--color-accent);
-      border: none;
-      outline: none;
-      color: var(--color-heading);
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    .questions .container .second-part .right .Lessons button:hover {
-      background-color: var(--color-secondary);
-    }
-
-    .questions .container .second-part .right .Lessons button:active {
-      background-color: var(--color-primary);
-    }
-
-    .questions .container .second-part .left {
-      width: 80%;
-      margin-top: -20px;
-    }
-
-    .questions .container .hero {
-      flex-direction: column;
-      margin-bottom: 50px;
-    }
-
-    .questions .container .hero .search-part {
-      width: 100%;
-      text-align: center;
-    }
-
-    .questions .container .hero .search-part h1 {
-      margin: 20px 0;
-    }
-
-    .questions .container .second-part {
-      flex-direction: column;
-    }
-
-    .questions .container .second-part .right {
-      width: 90%;
-      height: 10px;
-      margin-right: 0;
-      border-radius: 12px;
-    }
-
-    .questions .container .second-part .right h2 {
-      margin-bottom: 50px;
-    }
-
-    .questions .container .second-part .left {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .questions .container .second-part .left .categories {
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-
-    .questions .container .second-part .left .categories > div {
-      width: 100%;
-      margin: 10px 0;
-    }
-
-    .questions .container .second-part .left .files .box {
-      width: 70%;
-      margin: 10px 0;
-    }
-
-    .questions .container .second-part .left .files .box img {
-      width: 90%;
-      margin: 0 14px;
-    }
-
-    .questions .container .second-part .left .files .box h3 {
-      margin-top: -6px;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .questions .container .second-part .left .files .box .buttons button {
-      width: 50%;
-      height: 60px;
-    }
-
-    .questions
-      .containe
-      .second-part
-      .left
-      .categories
-      .Scientific-field
-      select {
-      margin-right: 50px;
-    }
-
-    .questions .container .second-part .left .categories .model {
-      border-radius: 12px 12px 12px 12px;
-    }
-
-    .questions
-      .container
-      .second-part
-      .left
-      .categories
-      .model
-      button:first-child {
-      border-radius: 0 12px 12px 0;
-    }
-
-    .questions .container .second-part .left .categories select {
-      width: 100%;
-    }
-
-    .questions .container .second-part .left .categories .year {
-      width: 150px;
-      margin-right: 0;
-    }
-
-    .questions .container .second-part .left .categories .class {
-      width: 260px;
-      margin: 0;
-    }
-
-    .questions .container .second-part .left .categories .Scientific-field {
-      width: 150px;
-      margin: 0;
-    }
+  .questions .container .second-part .right .Lessons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
-  /*
+  .questions .container .second-part .right .Lessons button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0 12px 12px 12px;
+    padding: 15px;
+    background-color: var(--color-accent);
+    border: none;
+    outline: none;
+    color: var(--color-heading);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .questions .container .second-part .right .Lessons button:hover {
+    background-color: var(--color-secondary);
+  }
+
+  .questions .container .second-part .right .Lessons button:active {
+    background-color: var(--color-primary);
+  }
+
+  .questions .container .second-part .left {
+    width: 80%;
+    margin-top: -20px;
+  }
+
+  .questions .container .hero {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .questions .container .hero .search-part {
+    width: 100%;
+    text-align: center;
+  }
+
+  .questions .container .hero .search-part h1 {
+    margin: 20px 0;
+  }
+
+  .questions .container .second-part {
+    flex-direction: column;
+  }
+
+  .questions .container .second-part .right {
+    width: 90%;
+    height: 10px;
+    margin-right: 0;
+    border-radius: 12px;
+  }
+
+  .questions .container .second-part .right h2 {
+    margin-bottom: 50px;
+  }
+
+  .questions .container .second-part .left {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .questions .container .second-part .left .categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .questions .container .second-part .left .categories > div {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .questions .container .second-part .left .files .box {
+    width: 70%;
+    margin: 10px 0;
+  }
+
+  .questions .container .second-part .left .files .box img {
+    width: 90%;
+    margin: 0 14px;
+  }
+
+  .questions .container .second-part .left .files .box h3 {
+    margin-top: -6px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .questions .container .second-part .left .files .box .buttons button {
+    width: 50%;
+    height: 60px;
+  }
+
+  .questions .containe .second-part .left .categories .Scientific-field select {
+    margin-right: 50px;
+  }
+
+  .questions .container .second-part .left .categories .model {
+    border-radius: 12px 12px 12px 12px;
+  }
+
+  .questions
+    .container
+    .second-part
+    .left
+    .categories
+    .model
+    button:first-child {
+    border-radius: 0 12px 12px 0;
+  }
+
+  .questions .container .second-part .left .categories select {
+    width: 100%;
+  }
+
+  .questions .container .second-part .left .categories .year {
+    width: 39%;
+    margin-right: 0;
+  }
+
+  .questions .container .second-part .left .categories .class {
+    width: 59%;
+    margin: 0;
+  }
+
+  .questions .container .second-part .left .categories .Scientific-field {
+    width: 39%;
+    margin: 0;
+  }
+}
+
+/*
 |----------------------------------------------|
 |===================|  CHAT |==================|
 |----------------------------------------------|
 */
 
-  .chat {
-    flex-wrap: wrap;
-  }
-
-  .chat .Channels {
-    height: 300px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .chat .Message-section {
-    order: 3;
-    width: 99%;
-  }
-
-  .chat .Contacts {
-    height: 300px;
-    order: 2;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .chat .Message-section {
-    width: 100%;
-    height: 500px;
-  }
-
-  .chat .Message-section .Messages {
-    margin-bottom: 10px;
-    width: 100%;
-    margin-right: 0px;
-  }
-
-  .chat .Message-section .Send-section input {
-    width: 50%;
-  }
-
-  .chat .Message-section .Send-section button {
-    width: 18%;
-    padding: 10px 10px;
-  }
-
-  footer p {
-    font-size: 13px;
-  }
-
-  #go-top i {
-    font-size: 22px;
-  }
+.chat {
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 426px) {
-  /*
-|---------------------------------------------------|
-|===================|  QUESTION  |==================|
-|---------------------------------------------------|
-  */
-
-  .questions .container .second-part .left .categories .class {
-    width: 230px;
-  }
+.chat .Channels {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 376px) {
-  /*
-|---------------------------------------------------|
-|===================|  QUESTION  |==================|
-|---------------------------------------------------|
-  */
+.chat .Message-section {
+  order: 3;
+  width: 99%;
+}
+
+.chat .Contacts {
+  height: 300px;
+  order: 2;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.chat .Message-section {
+  width: 100%;
+  height: 500px;
+}
+
+.chat .Message-section .Messages {
+  margin-bottom: 10px;
+  width: 100%;
+  margin-right: 0px;
+}
+
+.chat .Message-section .Send-section input {
+  width: 50%;
+}
+
+.chat .Message-section .Send-section button {
+  width: 18%;
+  padding: 10px 10px;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+#go-top i {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 321px) {
+  .questions .container .second-part .left .files .box img {
+    width: 180px;
+    margin-right: 11px;
+  }
+
+  .questions .container .second-part .left .categories .year {
+    width: 280px;
+  }
 
   .questions .container .second-part .left .categories .model {
-    width: 48%;
-    padding: 10px;
+    width: 250px;
   }
 
   .questions .container .second-part .left .categories .class {
-    width: 185px;
+    width: 280px;
+    margin-bottom: 10px;
   }
 
-  .questions .container .second-part .left .files .box img {
-    width: 230px;
-    margin: 0 6px;
-  }
-
-  .questions .container .second-part .left .files .box .buttons button {
-    height: 50px;
-  }
-
-  @media only screen and (max-width: 321px) {
-    /*
-|---------------------------------------------------|
-|===================|  QUESTION  |==================|
-|---------------------------------------------------|
-  */
-
-    .questions .container .second-part .left .files .box img {
-      width: 180px;
-      margin-right: 11px;
-    }
-
-    .questions .container .second-part .left .categories .year {
-      width: 280px;
-    }
-
-    .questions .container .second-part .left .categories .model {
-      width: 250px;
-    }
-
-    .questions .container .second-part .left .categories .class {
-      width: 280px;
-      margin-bottom: 10px;
-    }
-
-    .questions .container .second-part .left .categories .Scientific-field {
-      width: 280px;
-    }
+  .questions .container .second-part .left .categories .Scientific-field {
+    width: 280px;
   }
 }
