@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import data from "./data.json";
+import "../../../assets/css/App.css"
 
 function IonDetails() {
   function getQueryParam(name) {

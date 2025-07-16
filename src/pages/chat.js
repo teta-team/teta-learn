@@ -11,14 +11,14 @@ function Chat() {
 
   const channels = Array(5).fill({
     image:
-      "https://www.filimo.com/shot/wp-content/uploads/2022/05/spong-bob-03.jpg",
-    name: "باب اسفنجی",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIh4JxD_2jQ_Ep-KPwcowtmCiWidov4DVsdw&s",
+    name: "ریاضی",
   });
 
   const users = Array(5).fill({
     image:
-      "https://api2.zoomg.ir/media/2020-8-c096e211-9250-4699-ac85-83a53d511ae9-66cc7d092b5676090d01cef9",
-    name: "پاتریک",
+      "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=",
+    name: "کاربر",
   });
 
   return (
@@ -74,12 +74,7 @@ function Chat() {
               <h4>امیرحسین شریفی</h4>
             </div>
             <div className="file">
-              <h5>
-                زن شایع تو همه سختی هاش کنارش بود قبل ازدواجشون حتی موقع هایی که
-                رفیقای شایع منم مث زن شایع پشتتم خب حرف دلم اینه بهت نگفته بودم
-                و چون ادم رکی هستم تو صورتت میگم چه بخوای چه نخوای هم نمیزارم
-                جدا شیم بهوونه هم میتونم بگم چون شما خیلی میدونیدپشتس نبودن
-              </h5>
+              <p>سلام میشه درمورد مثلثات راهنماییم کنید؟</p>
             </div>
           </div>
         </div>
