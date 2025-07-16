@@ -125,6 +125,7 @@ body {
   overflow-x: hidden;
   color: var(--color-default);
   font-family: var(--font-default);
+  user-select: none;
 }
 
 h1,
@@ -215,6 +216,10 @@ li {
 
 button {
   font-family: vazir;
+}
+
+img {
+  -webkit-user-drag: none;
 }
 
 #go-top {
@@ -1046,10 +1051,15 @@ body.dark-mode .lesson .project:hover {
   width: 200px;
 }
 
+.chat .add {
+  width: 100%;
+  text-align: center;
+}
+
 .chat .add button {
   width: 90%;
   padding: 5px 0;
-  margin: 5px 13px;
+  margin: 5px 0;
   cursor: pointer;
   border-radius: 10px;
   border: none;
@@ -1144,13 +1154,16 @@ body.dark-mode .lesson .project:hover {
 }
 
 .chat .Message-section .Messages .Message .file {
-  width: 98%;
+  width: fit-content;
+  max-width: 98%;
   border-radius: 12px 0 12px 12px;
   background-color: #25bff73a;
   padding: 5px 10px;
+  margin-right: 20px;
 }
 
-.chat .Message-section .Messages .Message .file h5 {
+.chat .Message-section .Messages .Message .file p {
+  width: fit-content;
   text-align: justify;
 }
 
@@ -1542,7 +1555,259 @@ footer p strong {
   display: none;
 }
 
-@media only screen and (max-width: 480px) {
+#details {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 155px) ;
+}
+
+#details .details {
+  width: 100%;
+  position: relative;
+}
+
+#details .box {
+  padding: 20px;
+  background-image: linear-gradient(45deg, #649bff, #82db79);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #64e0ff;
+  position: absolute;
+  top: 5%;
+  right: 80%;
+}
+
+#details .box .nums {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#details .box h2 {
+  font-size: 100px;
+  color: #000;
+}
+
+#details .box sub {
+  font-size: 50px;
+  color: #000;
+}
+
+#details .box sup {
+  font-size: 50px;
+  color: #000;
+}
+
+#details .name h1 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#details h1 {
+  color: var(--color-heading);
+}
+
+#details .layers h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+#details .layers p {
+  width: 80%;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px auto;
+}
+
+#details .layers h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+#details .teif {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#details .teif h1 {
+  font-size: 30px;
+  margin: 0;
+  margin-left: 20px;
+}
+
+#details .teif img {
+  width: 45%;
+  border-radius: 10px;
+  outline: 1px solid var(--color-accent);
+  outline-offset: 5px;
+}
+
+#details .lweis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px 0;
+}
+
+#details .lweis h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+#details .lweis .shape {
+  margin-right: 100px;
+}
+
+#details h2 {
+  font-size: 30px;
+  color: var(--color-heading);
+}
+
+#details .shape {
+  width: 100px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#details .shape .g-box {
+  display: flex;
+}
+
+#details .shape .g-box:nth-child(5) {
+  width: 10px;
+  height: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#details .shape .g-box:nth-child(2) {
+  width: 50px;
+  height: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#details .shape .g-box:nth-child(3) {
+  width: 10px;
+  height: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#details .shape .g-box:nth-child(4) {
+  width: 50px;
+  height: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#details .shape .circle {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-default);
+  border-radius: 50%;
+}
+
+/*
+|------------------------------------------------------|
+|===================|  JERM MOLI  |====================|
+|------------------------------------------------------|
+*/
+
+.JermMoli {
+  direction: ltr;
+  height: 77vh;
+}
+
+.JermMoli .mode {
+  margin-bottom: 40px;
+}
+
+.JermMoli .body {
+  width: 100%;
+}
+
+.JermMoli .body form {
+  width: 100%;
+}
+
+.JermMoli input {
+  width: 100px;
+  font-family: vazir;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-right: 5px;
+  text-align: center;
+  color: var(--color-default);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-default);
+  outline: none;
+}
+
+.JermMoli select {
+  background-color: var(--color-background);
+  color: var(--color-default);
+  font-family: vazir;
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+  outline: none;
+}
+
+.JermMoli select option {
+  background-color: var(--color-background);
+  color: var(--color-default);
+  font-family: vazir;
+  font-size: 18px;
+}
+
+.JermMoli span {
+  font-size: 38px;
+  margin: 0 5px;
+}
+
+.JermMoli p {
+  font-size: 24px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
   #ions {
     direction: ltr;
     width: 100%;
@@ -1667,58 +1932,84 @@ footer p strong {
 */
 
   #details {
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
   }
 
   #details .details {
-    width: 100%;
+    width: calc(100% - 40px);
     position: relative;
+    padding-top: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: hidden;
   }
 
   #details .box {
-    padding: 20px;
-    background-image: linear-gradient(45deg, #649bff, #82db79);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #64e0ff;
-    position: absolute;
     top: 5%;
-    right: 80%;
+    right: 50%;
+    transform: translateX(50%);
   }
 
-  #details .box .nums {
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  #details .box h2 {
-    font-size: 100px;
-    color: #000;
-  }
-
-  #details .box sub {
-    font-size: 50px;
-    color: #000;
-  }
-
-  #details .box sup {
-    font-size: 50px;
-    color: #000;
+  #details .name {
+    width: 100%;
   }
 
   #details .name h1 {
-    margin: 0;
-    font-size: 45px;
-    font-weight: bold;
+    font-size: 35px;
+  }
+
+  #details .layers {
+    width: 100%;
+  }
+
+  #details .layers h1 {
+    font-size: 25px;
+  }
+
+  #details .layers p {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #details .layers h2 {
+    font-size: 25px;
+  }
+
+  #details .teif {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #details .teif h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  #details .teif img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  #details .lweis {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #details .lweis h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  #details .lweis .shape {
+    margin: 0 auto;
+  }
+
+  .JermMoli .body form {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .categories {
@@ -1729,213 +2020,29 @@ footer p strong {
     width: 30%;
     margin: 13.563px auto;
   }
+}
 
-  #details h1 {
-    color: var(--color-heading);
-  }
-
-  #details .layers h1 {
-    margin: 10px 0;
-    font-size: 30px;
-  }
-
-  #details .layers p {
-    width: 80%;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 10px auto;
-  }
-
-  #details .layers h2 {
-    margin: 0;
-    font-size: 30px;
-  }
-
-  #details .teif {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px 0;
-  }
-
-  #details .teif h1 {
-    font-size: 30px;
-    margin: 0;
-    margin-left: 20px;
-  }
-
-  #details .teif img {
-    width: 45%;
-    border-radius: 10px;
-    outline: 1px solid var(--color-accent);
-    outline-offset: 5px;
-  }
-
-  #details .lweis {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 40px 0;
-  }
-
-  #details .lweis h1 {
-    margin: 0;
-    font-size: 30px;
-  }
-
-  #details .lweis .shape {
-    margin-right: 100px;
-  }
-
-  #details h2 {
-    font-size: 30px;
-    color: var(--color-heading);
-  }
-
-  #details .shape {
-    width: 100px;
-    height: 90px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  #details .shape .g-box {
-    display: flex;
-  }
-
-  #details .shape .g-box:nth-child(5) {
-    width: 10px;
-    height: 50px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  #details .shape .g-box:nth-child(2) {
-    width: 50px;
-    height: 10px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #details .shape .g-box:nth-child(3) {
-    width: 10px;
-    height: 50px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
-  #details .shape .g-box:nth-child(4) {
-    width: 50px;
-    height: 10px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #details .shape .circle {
-    width: 10px;
-    height: 10px;
-    background-color: var(--color-default);
-    border-radius: 50%;
-  }
-
-  /*
-|------------------------------------------------------|
-|===================|  JERM MOLI  |====================|
-|------------------------------------------------------|
-*/
-
-  .JermMoli {
-    direction: ltr;
-    height: 77vh;
-  }
-
-  .JermMoli .mode {
-    margin-bottom: 40px;
-  }
-
-  .JermMoli .body {
-    width: 100%;
-  }
-
-  .JermMoli .body form {
-    width: 100%;
-  }
-
-  .JermMoli input {
-    width: 80px;
-    font-family: vazir;
-    padding: 5px;
-    font-size: 18px;
-    border-radius: 10px;
-    margin-right: 5px;
-    text-align: center;
-  }
-
-  .JermMoli select {
-    background-color: var(--color-background);
-    color: var(--color-default);
-    font-family: vazir;
-    font-size: 18px;
-    padding: 5px 15px;
-    border-radius: 10px;
-    margin: 0 5px;
-  }
-
-  .JermMoli span {
-    font-size: 38px;
-    margin: 0 5px;
-  }
-
-  .JermMoli p {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  /*
+/*
 |------------------------------------------------------|
 |======================|  404  |=======================|
 |------------------------------------------------------|
 */
 
-  .not-found {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
+.not-found {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
-  .not-found img {
-    width: 50%;
-  }
+.not-found img {
+  width: 50%;
+}
 
-  .not-found h1 {
-    position: absolute;
-    top: 90%;
-    font-size: 40px;
-    margin: 0;
-  }
+.not-found h1 {
+  position: absolute;
+  top: 90%;
+  font-size: 40px;
+  margin: 0;
 }
 
 /*
